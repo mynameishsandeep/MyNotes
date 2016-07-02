@@ -1,0 +1,47 @@
+1) Spring AutoScan
+2) Spring Scope --------->singleton, prototype, request, session, global-session
+3) Spring AutoWiring
+
+Wiring Type -->
+Injection Type --> setter, constructor
+Steriotype : @Component @Controller @Service @Repository
+
+@Autowired is byType
+
+@Autowired with @Qualifier is byName
+http://www.mkyong.com/spring/spring-autowiring-qualifier-example/
+
+@Resource - equivalent to @Autowired ...Autowired is spring spec, @Resource is JSR 250
+http://www.concretepage.com/spring/resource_annotation_spring
+
+@Required--> applicable to property and setter , this annotation make sure that bean cannot be initialized without this dependency.
+If any properties with @Required have not been set, a BeanInitializationException will be thrown by this bean post processor. 
+http://www.mkyong.com/spring/spring-dependency-checking-with-required-annotation/
+
+@Autowired(required=true)
+
+How do you turn on annotation wiring?
+<context:annotation-config/>
+
+@Configuration ---> to declare bean without xml
+
+is it possible to initialize a singleton bean having prototype bean-->yes. use ObjectFactory to declare prototype inside singleton
+
+What are the different types of spring ioc containers
+There are two types of IoC containers. They are:
+1)BeanFactory
+2)ApplicationContext
+The ApplicationContext interface is built on top of the BeanFactory interface. It adds some extra functionality than BeanFactory such as simple integration with Spring's AOP, message resource handling (for I18N), event propagation, application layer specific context (e.g. WebApplicationContext) for web application. So it is better to use ApplicationContext than BeanFactory.
+
+
+Give an example of BeanFactory implementation.
+The most commonly used BeanFactory implementation is the XmlBeanFactory class. This container reads the configuration metadata from an XML file and uses it to create a fully configured system or application.
+
+What are the common implementations of the ApplicationContext?
+The three commonly used implementation of 'Application Context' are:
+1)FileSystemXmlApplicationContext: This container loads the definitions of the beans from an XML file. Here you need to provide the full path of the XML bean configuration file to the constructor.
+2)ClassPathXmlApplicationContext: This container loads the definitions of the beans from an XML file. Here you do not need to provide the full path of the XML file but you need to set CLASSPATH properly because this container will look bean configuration XML file in CLASSPATH.
+3)WebXmlApplicationContext: This container loads the XML file with definitions of all beans from within a web application.
+
+Are Singleton beans thread safe in Spring Framework?
+No, singleton beans are not thread-safe in Spring framework.
