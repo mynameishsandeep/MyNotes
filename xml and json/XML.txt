@@ -1,0 +1,2 @@
+DOM for html navigation
+XPath for xml navigation

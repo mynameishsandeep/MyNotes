@@ -1,0 +1,20 @@
+java exceptions
+concurrency
+collections
+thread
+sql queries
+sql inner query
+Garbage Collection
+Pass by value and Pass by reference
+
+behavioral interview questions.
+
+how to do sql tuning
+
+What are the components of SDLC?
+requirement gathering
+design
+implementation
+testing 
+deployment
+maintenance

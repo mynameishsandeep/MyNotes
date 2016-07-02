@@ -1,0 +1,12 @@
+Propagation: Typically, all code executed within a transaction scope will run in that transaction. However, you have the option of specifying the behavior in the event that a transactional method is executed when a transaction context already exists. For example, code can continue running in the existing transaction (the common case); or the existing transaction can be suspended and a new transaction created.
+
+example scenario: In below txMethod2 already defined transactional behaviours. txMethod1 starts transaction. So txMethod1 can define when transaction exists on a callable method.
+txMethod1() {
+	fun()
+	txMethod2();
+	fun2();
+}
+
+txMethod2() {
+	
+}

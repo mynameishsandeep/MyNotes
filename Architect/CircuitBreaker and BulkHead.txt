@@ -1,0 +1,5 @@
+Lets say I am having product service and it has 10 instance
+
+When an service instance is failed or not responsive for some reason. Ex: it is trying to call an 
+
+How to simulate an instance not to respond: add an infinity loop for a specific method. Call that API. That instance will be stuck.

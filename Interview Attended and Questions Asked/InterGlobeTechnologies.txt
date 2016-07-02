@@ -1,0 +1,18 @@
+
+
+What are the java package that you have comfortable with.
+What is pipedInputStream.
+When the InputStream is closed. Do we need to close socket also?.
+What is dataInputStream.
+What is decorator pattern
+What is the difference between builder pattern and factory pattern
+what is SOLID in design principle.
+what is the name for child node in xml.
+What is JMS MessageSelector.
+What are the Duty of ScrumMaster.
+Servlet 3.0 Features.
+What is ThreadLocal.
+What is ServletChaining.
+What is denormalization
+
+What is difference between Reader and InputStream

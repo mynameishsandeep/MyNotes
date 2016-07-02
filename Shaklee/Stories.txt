@@ -1,0 +1,29 @@
+consignee information -->  cart api.......
+Users st
+
+add/edit/delete/list consignee --- 3 points
+
+redesign the cart table to hold all the order related information
+currently cart has only 4 columns in cart service. We need to design cart table similar to one in Yatai service.
+
+cURRENTLY ORDER mODULE PICKS FROM yATAI. rEDesign to pick the same from local db. 
+
+Fetching Order system from 
+create order
+create order for others
+Add Exchange Orders
+
+get shipping fee calcuation from Yatai --- 3 
+
+PV calculation for various packag goods, products, goods
+
+consignee address should be in remote... currently it is in local...
+
+
+order should be in yatai.... currently it is done as local....
+
+
+1) Renewal of product.
+2) Immediate Payment on renewal products.
+3) 
+

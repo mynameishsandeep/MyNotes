@@ -1,0 +1,19 @@
+how to store data from 1 to 100
+
+price-->  decimal(5,2)
+
+char, varchar, date and blob needs to be inserted with single quote.
+decimal, tinyint, integer dont need quote.
+
+assigning default
+salary decimal(5,2) not null default 5000.00
+
+escape a special char on insert by giving \ or '
+
+what is package
+
+what is collection
+
+what is cursor
+
+difference between cursor and package and function

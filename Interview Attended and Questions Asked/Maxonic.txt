@@ -1,0 +1,6 @@
+How will you get biggest panlindrome on the given string
+Find a missing number in an unique array of 1 to 100?
+What is hashMap? How will you implement on your own.?
+What is SSO?
+design an rest service api for Facebook
+difference between put and post

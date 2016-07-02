@@ -1,0 +1,5 @@
+Microsoft 360 offering word, excel online--- SAAS
+
+Google App Engine --- PAAS
+
+Amazon Web Services --- IAAS

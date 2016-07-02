@@ -1,0 +1,12 @@
+for a  file read, use multiple threads to access single file using randomaccessfile Ex: 1 to 100 line thread1, 101
+
+multiplethreads using executorservice.
+use middleware... asynchronous..
+Caching technique
+preparedstatement with addbatch
+sharding...partitioned schema 
+Use Connection Pooling and PreparedStatement Pooling
+
+tempdb with stored procedures.
+
+Use Big Data.... HDFS.Break larger files into smaller chunks. Use Map/Reduce Technique. 

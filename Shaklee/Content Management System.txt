@@ -1,0 +1,13 @@
+Use AM tool to implement web services.
+
+Web Content Management (WCM)
+	- Arrange the products country wise.
+
+AEM
+asset, load, show..
+
+edit, author, publish, show updated content
+
+
+front end angular...JSON...
+AEM for content storage.

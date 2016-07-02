@@ -1,0 +1,46 @@
+thread sync 2 ways --thread caching value... thread intercommunication
+
+volatile - 
+join(); will wait for the called threads to complete. Ex: thread1.join();
+
+JVM caches the object data into individual thread thinking that it should not be modified by other threads. But technically it is not guaranteed and varies from 1 JVM to another JVM. Inorder to indicate java, to not cache the object data for each threads volatile keyword is used.
+
+count++; Here 3 statemens are present... 
+1) getting count value
+2) adding 1 to the count value
+3) assigning new value to count
+
+www.caveofprogramming
+
+2 threads of same object cannot enter into 2 different synchronized methods at a time. To avoid this synchronize the 2 methods using Object lock rathan Class object lock.
+
+Thread Pool is like allocating work to workers. When they finish their they are assigned with new work...
+ExecutorService executor = Executors.newFixedThreadPool(5);
+executor.submit(new ThreadClassName())
+executor.shutdown();
+executor.awaitTerminatioin(1, TimeUnit.day);
+
+CountdownLatch is used to start a series of threads and then wait until all of them are complete (or until they call countDown() a given number of times.
+CountDownLatch--A thread safe class used for counting when a stack of execution is completed.
+CountDownLatch latch = new CountDownLatch(3);//thread size == latch size
+latch.countDown()///reduces the latch value by1.
+latch.await();// wait till latch value 0;
+
+Producer-Consumer with ArrayBlockingQueue
+
+Notify will release the lock. But will not handover the lock to wait.. So if there is Thread.Sleep(1000) after notify, sleep will acquire the lock...
+
+
+ReentrantLock works same like synchronized. But calling thread can put multiple lock and has to unlock at the samenumber.
+Lock lock = new ReentrantLock();
+
+Lock Condition is used for wait and notify mechanism...
+condition.await;
+condition.signal;
+
+deadlock can be avoided by ways
+1) under 2 synchronized methods, put Locks in same order 
+2) put locks in seperate method. check if lock1 is available. lock2 is availble. Then lock both. else release the lock and wait.
+
+callable is used to return output from thread...Future is used to get the result from Thread...
+Runnable has run() method... Callable has call() method, that returns any output

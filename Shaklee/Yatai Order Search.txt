@@ -1,0 +1,65 @@
+order_sn order_sn
+start_time ord_date1
+end_time ord_date2
+ship_ment  ord_shipment (I Ordered (1), Order for Oters (2))
+order_type  ord_kind (whole(-1), Common order(1), combined order)
+order_status ord_status ( whole(-1), UnPaid(1), To Be Shipped(2), Shipped(3), Cancelled(5))
+query
+
+
+ord_mb_no = session username
+$ord_source -- not known
+
+$page_no
+$page_size
+
+
+
+
+user.php?act=order_list
+
+
+Content-Disposition: form-data; name="order_sn"
+???????
+
+Content-Disposition: form-data; name="start_time"
+2015-05-19
+
+Content-Disposition: form-data; name="end_time"
+2015-06-18
+
+Content-Disposition: form-data; name="ship_ment"
+1
+
+Content-Disposition: form-data; name="order_type"
+-1
+
+Content-Disposition: form-data; name="order_status"
+-1
+
+Content-Disposition: form-data; name="query"
+
+
+
+http://10.12.1.37:3306/CNWebServiceV1020140221/webserver/soap/order_list.php?act=getOrderList
+
+			'ord_mb_no' => $_SESSION['user_sn'],
+					'ord_no'=>$ord_no,
+					'ord_date1'=>$ord_date_begin,
+					'ord_date2'=>$ord_date_end,
+					'ord_status'=>$ord_status,
+					'ord_shipment'=>$ord_shipment,
+					'ord_source'=>$ord_source,
+					'ord_kind'=>$ord_kind,
+					'page_no'=>$page,
+					'page_size'=>$page_size,
+					);
+
+
+http://10.24.22.38:8080/Web/ChinaAPI/webserver/soap/order_list.php?act=getOrderList&ord_mb_no=10662270&ord_date1=2015-05-19&ord_date2=2015-06-18&ord_status=-1&token=e10adc3949ba59abbe56e057f20f883e&ord_shipment=1&ord_source=-1&ord_kind=-1&page_no=1&page_size=5
+
+========================================================
+	validations
+1) If Order_sn is not filled then order_sn=''
+2) If data requested is more than a month, then return ??????????????
+3) 

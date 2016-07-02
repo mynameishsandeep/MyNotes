@@ -1,0 +1,2 @@
+1) Explain the current project architecture
+2) 

@@ -1,0 +1,3 @@
+
+host name is mandate for a box.
+advertised.host.name ---> host name ...is mandate to be seutp

@@ -1,0 +1,13 @@
+1) What is Threaddump?
+2) What is Heapdump?
+3) how to enable session for user?
+4) strutsMVC
+5) how you will choose framework for a project. EX: on what situation you will choose EJB or spring based solution.
+6) coding on email validation.."thangaprabhu2004@gmail.com". Verify "@" present and ".com" present using character array.
+7) what is XPath and XQuery...
+8) What is XSLT
+9) Which part of heap is collected first?. Youth or tenure.. Answer is Youth: VM will assign all object to Eden. GC will run very often on Youth and move the  live objects from Eden to Survivor. Then later during survivor cleanup, GC moves live objects to Tenure. In tenure objects live long and when tenure is full, GC does a major object removal.
+10) Explain any caching framework used in project under what situation... EHCache.. Terrocotta
+11) On a given scenario how will you improve server performance..1) horizontal scalability 2) vertical scalability..
+Also from application efficient usage of memory and threads.
+12) How will you achieve security on web-service?1) token authentication 2) authorization 2) digital certificate 3) fraud mgmt(device fingerprint, cross site forgery) 4) scanning for malware(pinpoint, threatmetrix)

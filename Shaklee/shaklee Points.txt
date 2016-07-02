@@ -1,0 +1,21 @@
+http://localhost:9001/msc/users/10662270/e10adc3949ba59abbe56e057f20f883e
+
+http://10.24.22.38:8080/Web/ChinaAPI/webserver/soap/login.php?act=UserLogin&login_type=1&login_user=10662270&login_pwd=123456
+http://10.24.22.38:8080/Web/ChinaAPI/webserver/soap/user.php?act=getUserInfo&user_sn=10662270&token=e10adc3949ba59abbe56e057f20f883e
+
+some of the depedencies will not be available on ivy repository. Ex: spymemcached is available on couchbase. To include couchbase repository. Include below resolvers....
+resolvers += "Spy Repository" at "http://files.couchbase.com/maven2" // required to resolve `spymemcached`, the plugin's dependency.
+
+load balancer--eureka(service registry and discovery) and ribbon
+fault tolerance -- hystrix
+
+db.default.url="jdbc:mysql://10.24.23.19/shaklee_users"
+db.default.user=shakleeuser
+db.default.pass=shaklee
+
+Swagger.io can read JAX-RS annotation and can generate documentation.
+If we give json schmea to Swagger.io UI, it can generate sample json input(by reading from json schema) and can fire a JSON request to server (just like endpoints in WSDL), just like SOAP UI. The JSON schema is more complex to build.
+
+For Play Framework, swagger needs annotation to be present on controller class...So we dropped the plan of using swagger.
+
+eureka server instant id same as computer name

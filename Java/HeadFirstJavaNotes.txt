@@ -1,0 +1,35 @@
+1) adding the all the logic into main method will make JAVA program as POP.
+
+
+Object has state and behaviour
+Class is a blueprint of object
+When designing a class, think about the 1) things the object knows itself are called instance variables 2) things the object does are called 
+instance variable represents objects state
+
+
+variable has a type and name and value... int(type) salary(name) = 10(value)
+
+primitive variable is full of bits representing the actual value of the variable, 
+an object reference variable is full of bits representing a wayto get to the object.
+
+The 3 steps of object declaration, creation and assignment
+Dog myDog = new Dog();
+
+An array is always an object, even if the "array is declared to hold primitives". There is no such thing as a primitive array, only an array that holds primitives.
+
+interface vs abstract class
+1) Card(Interface) --> Credit Card(Abstract Class)--> VisaCreditCard(Concrete class)
+
+CreditCard card = new CreditCard[10]; ---> How many objects are created...
+
+In a parent child class. Create a instance of Child with parent reference .Call a method on reference, call a variable on reference...parent or child invoked?
+In a parent child class. Does creating instance of Child will call parent constructor --->yes
+
+Does the compiler gives no-argument constructor always.? -------------- No.
+
+Life of variables depends on whether it is declared at static or instance or local variable. 
+Life of static variable ends when a class unloaded.
+Life of instance variable ends when a object is garbage collected.
+Life of local variables ends outside the stack.
+
+Inner Class scenario--> implement an interface 2  times in a same class and give different behaviour. Ex: Swing Ex: 2 Buttons pressed.

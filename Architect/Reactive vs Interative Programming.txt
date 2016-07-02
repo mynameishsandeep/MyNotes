@@ -1,0 +1,5 @@
+interactive programming = synchronous + blocking. Interactive is based on iterator pattern. Get/Wait a set of data.
+
+reactive programming = asynchronous + non-blocking. Reactive is based on observer pattern.
+
+Reactive programming examples are javascript, c++, play framework

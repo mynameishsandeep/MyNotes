@@ -1,0 +1,26 @@
+What is a java marker interface? Is there any alternate way that can serve the same purpose as marker interface?
+From java 1.5, the need for marker interface is eliminated by the introduction of the java annotation feature.
+
+
+1) when 2 db transaction needs to be commited in a single method. what is the strategy to be used? 
+Two-phase commit protocol
+1) Commit request phase
+2) Commit phase
+
+1) What is the difference between the Find Bugs and the PMD tool.
+Means when to use FindBugs and when to use PMD Tool?
+Ans: PMD analyzes the source code while Findbugs analyzes the compiled class files. Both look for quite different types of mistakes, so it's good to use both of them in your project.
+
+2) How to run some code b4 JVM quits.Ex on below conditions
+
+Because all of its threads have completed execution
+Because of call to System.exit()
+Because user hit CNTRL-C
+System level shutdown or User Log-Off
+
+Solution:
+Shutdown Hook comes to rescue in all such scenarios. Application attach a shutdown hook to thereself, that JVM runs when application goes down.
+
+Runtime.getRuntime().addShutdownHook
+
+link : http://hellotojavaworld.blogspot.com/2010/11/runtimeaddshutdownhook.html

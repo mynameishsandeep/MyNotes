@@ -1,0 +1,38 @@
+
+
+infrastructure--> hardwares, operating systems, programming languages, communication links
+service are built on infrastructure to provide info or gain info from infrastrure
+service and infrastructure forms systems
+
+services might need to interact with existing services using existing technologies.
+
+Middleware technology provides interation between various serivices.
+Advantages of Middleware: It lets the user concentrate on designing and implementing business logic rather than concentrating on exposing business logic to external service.
+
+List of middlewares
+Webservice
+Java Messaging Services (JMS)
+EJB
+RMI
+Jini
+Corba / IIOP
+Http + XML or JSON (aka AJAX)
+
+Message Queuing is a middleware technology 
+
+Queue is container of the messages.
+
+1) point-to-point communication (notification and request/reply interaction)
+2) broadcast communication (publish and subscribe)
+3) immediate, synchronous delivery (i.e. direct link)
+4) deferred, asynchronous delivery (i.e. queued, or store-and-forward)(Batch Processing)
+5) blocking versus non-blocking communication (i.e. asynchronous delivery service, or thread support)
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+ Running Functional Test in Local Environment
+
+1) Start the Server with jacoco agent...
+-javaagent:C:\dev\servers\jacoco-agent.jar=destfile=C:\dev\servers\jacoco.exec,jmx=true
+
+2) Run the Individual User Test Case.
+
+3) Open JConsole. Select the local process with catalina(for pivotal tc server)
+
+4) Go to org.jacoco:type=Runtime... Click on Dump. 
+
+5) Now you can see jacoco.exec is filled with data.
+
+6) Import the jacoco.exec in Eclipse ECLEmma Coverage tool.
+
+7) Main advantage of this approach. User can test the individual functional test cases.
+
+How Testing team were doing functional testing:
+1) They were using Jenkins to start the server, run jacoco agent on background, start testcase suite. 
+2) This is a tedious process. All changes needs to be deployed on server. update suite. verify in sonarqube.

@@ -1,0 +1,13 @@
+PMD Check style 
+
+Cobertura maven plug-in for source code test case coverage analysis
+
+Maven javadoc plug-in will be used to generate Javadocs.
+
+GD Hub will use Maven tool for build activities.
+
+Hudson Tool will be used for automatic build process.
+
+Spring Batch
+
+JBPM

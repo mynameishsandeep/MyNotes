@@ -1,0 +1,31 @@
+Phase1 : Lift and Shift.
+Phase2 : Enhance
+Phase3 : Extend/Build
+
+microservices
+composing of microservices --> Orchestration....Apache Camel..................
+ZooKeeper----> Registers and Discovers Micro Service.  
+
+Feature Flag...>Publish the application 10%. If goes well 20%. If not going well turn off. Ex: Amazon sells phone every thursday at 1PM to 1.10PM. But if product sold at 1.10. Turn off the feature.
+
+why zookeeper instead of eureka.
+
+AWS can go offline anytime. But we are in clustered AWS.
+
+graphDB...neo4j
+
+
+database performance..
+
+
+Ex: Single service... but how it will support for US, China, Taiwan... HOw the code will be organized.?
+How service orchestrator and microservice handles logic...
+Global perspective, what to keep commmon and what to make as service.
+
+NO duplication of code, Ex: If 2 services keeps similar functionality then move into a services. Ex: Address Service. Customer Address, Employee Address, Order Shipping Address, Event Happening Address, Vendor Address.
+
+
+
+convention over configuration
+
+responsive web design... for any device... for every market.

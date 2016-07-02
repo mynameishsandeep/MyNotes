@@ -1,0 +1,8 @@
+I have an Very large integer array... million
+Find top 10..
+
+1) Read top 10 on array. Sort it. Index the min.
+2) Read 11th element if it is greater than min... Sort 11 element. Remove old, index min
+3) Keep do this for million elements.
+
+Time Complexity : O(n)

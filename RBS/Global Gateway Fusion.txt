@@ -1,0 +1,49 @@
+Fusion 1 : client --> sftp --> AD --> OLS --> OPP --> Accept --> AD --> PAF --> MidOffice
+Fusion 2 : client --> AO   --> AD --> OLS --> OPP --> Accept --> AD --> PAF --> MidOffice
+
+AO --> RawFileinDB --> UPY Batch --> DB Records --> Approve --> Paymul
+
+batch payments?
+
+1) no front end to access direct
+2) xml file will uploaded and access direct functionality starts 
+
+
+single ach
+wire
+bank cheque
+customer cheque
+Batch ACH Payment - single debit, multiple credit 
+
+
+BANSTA -- BANkSTAtus Message
+Fusion Hash Generator
+
+Giro Payments :  Automated Clearing House like credit card automated telephone bill clearance on every 1st of month.
+ACH--Automated Clearing House
+
+GGF: Global Gateway Fusion, integration component that allows the online signing of payments and payment batches sent to the Access Direct channel to the bank and rerouting files uploaded in the Access Online channel to Access Direct.
+
+GGFBatch parse the fusion format files and sends payment information to Access Direct (AD).
+
+
+RBS business online help
+https://access.rbsm.com/gts/openworld/help/help.htm?turl=HTMLDocuments%2Fbatchach.htm
+
+How to run GGF
+properties file to run GGFOlsFileController.java
+Sample OLS File
+Database access
+
+codebase
+1) GGF is single threaded. Each controller will have its own instance of the class.
+ 
+2) Read OLS property file
+3) Create OLS file
+
+important files
+1) GGFFileUploadController - This controller is responsible for sending files that are uploaded from OPP to Access Direct and for receiving control messages (file level acknowledgments) from AccessDirect.
+2) GGFOlsFileController.java - This controller is responsible for receiving the OlsFile message from Access Direct and sending the control messages plus BANSTA message to Access Direct.
+SHA-1 digest algorithm used for some critical fields like debit account number, ordering party, beneficiary account number, the first 35 characters of the beneficiary name, amount, currency and the execution date.
+3) GGFTriggerController
+4) GGFBanstaController

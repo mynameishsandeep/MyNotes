@@ -1,0 +1,22 @@
+13/06/2015
+1) OAUTH 2.0 / OpenId / SAML
+a) specific about request and response.
+b) 3 parts of Access Token
+c) About JSONWebToken, RSA256 algorithm
+d) Explain flow for Authorize Code
+e) What are 4 grant types... difference between "implicit and resource Username and password"
+
+2) Set<Object> mySet= new Set<>();
+Set<String> my Set1 = new Set<>();
+mySet = mySet1; // It will fail because Generics allows only datatype declared to be inserted or assigned. 
+
+3)Below are the DB operations 1) String read(key) 2) write(key, value) 3) delete(key). How to synchronize on the best way.
+Ans: Read doesn't need synchronize. Write and delete needs synchronize. synchronize(key) will synchronize only that key. So request comes for 100 insert and all with different key all will succeed like the concept of ConcurrentHashMap
+
+4) Array of data with million datas. GetTopN 
+http://stackoverflow.com/questions/4084495/find-top-n-elements-in-an-array
+
+Store has Apparel and Electronics ... Apparel has Men and Women.... How to apply discounts at various level. 
+Write a print method If I give Store everything under store needs to be displayed
+Answer : Can be solved by Composition design pattern and decorator design pattern
+	

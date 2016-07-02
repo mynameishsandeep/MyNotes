@@ -1,0 +1,136 @@
+
+Connect the service to local zookeeper:
+activator -Dhttp.port=9000 -Dcoordination-service.connectionString=localhost:2181 run
+
+activator -jvm-debug 9901 -Dhttp.port=9060 -DcacheServer.connectionString=localhost:11211 -Dcoordination-service.connectionString=localhost:2181 run
+
+activator -jvm-debug 9902 -Dhttp.port=9060 -Dcoordination-service.connectionString=localhost:2181 run
+
+activator -Dhttp.port=9060 -Dcoordination-service.connectionString=localhost:2181 run
+
+
+ZooInspector start command:
+java -cp zookeeper-3.4.6-ZooInspector.jar;lib/*;D:/Development/Software-Downloads/zookeeper-3.4.6/zookeeper-3.4.6/*;D:/Development/Software-Downloads/zookeeper-3.4.6/zookeeper-3.4.6/lib/*;D:/Development/Software-Downloads/zookeeper-3.4.6/zookeeper-3.4.6/contrib/ZooInspector/* org.apache.zookeeper.inspector.ZooInspector
+
+
+starting memcache server
+go to --> C:\workspace\memcached
+start command prompt with admin privilege.
+net start "memcached"
+net stop "memcached"-->for stopping the service.
+
+Connect to localhost Memcache with Telnet:
+telnet localhost 11211
+
+publishing the jar locally in ivy repository
+activator publish-local
+
+activator -jvm-debug 9901 -Dhttp.port=9001 run
+
+git config --global http.sslVerify false
+
+plugins.sbt--->logLevel := Level.Debug
+====================================================================================================================================
+
+customer management -->
+activator -jvm-debug 5001 -Dhttp.port=9001 -Deureka.name=users-service -Deureka.port=9001 -Dcoordination-service.connectionString=localhost:2181 run
+
+activity management -->
+activator -jvm-debug 5004 -Dhttp.port=9004 -Deureka.name=activity-service1 -Deureka.port=9004 -Dcoordination-service.connectionString=localhost:2181 run
+
+activator -jvm-debug 9903 -Dhttp.port=9061 -Deureka.name=msc-service1 -Deureka.port=9061 run
+activator -Dhttp.port=9062 -Deureka.name=msc-service2 -Deureka.port=9062 run
+activator -Dhttp.port=9066 -Deureka.name=users-service -Deureka.port=9066 -Dcoordination-service.connectionString=localhost:2181 run
+
+dynamic-config-->
+activator -Dhttp.port=9015 -Dshaklee.config.server.git.uri=C:/workspace/shaklee/Development/ChinaGlobal/shaklee-dynamic-config-datastore -Dcoordination-service.connectionString=localhost:2181 run
+auth-server--> 
+activator  -jvm-debug 5009 -Dhttp.port=9009 -Dcoordination-service.connectionString=localhost:2181 -Deureka.name=oauth-service -Deureka.port=9009 run
+api gateway-->
+activator -jvm-debug 5001 -Dhttp.port=9000 -Dcoordination-service.connectionString=localhost:2181 run
+
+activator -jvm-debug 5002 -Dhttp.port=9002 -Deureka.name=cart-service -Deureka.port=9002 -Dcoordination-service.connectionString=localhost:2181 run
+
+activator -jvm-debug 5003 -Dhttp.port=9003 -Deureka.name=mdm-service -Deureka.port=9003 -Dcoordination-service.connectionString=localhost:2181 run
+
+activator -jvm-debug 5005 -Dhttp.port=9061 -Dcoordination-service.connectionString=localhost:2181 run
+
+activator -jvm-debug 5007 -Dhttp.port=9007 -Deureka.name=pricing-service -Deureka.port=9007 -Dcoordination-service.connectionString=localhost:2181 run
+=====================================================================================================================================
+git clone git@infapghp01.shaklee.com:GlobalProject/shaklee-dynamic-config.git
+screen -s DynamicScreen ./activator -Dhttp.port=9015 -Dcoordination-service.connectionString=10.24.23.8:2181 -Dshaklee.config.server.git.uri=/shaklee/plugins/shaklee-dynamic-config-datastore -Dshaklee.config.env="dev" run
+
+git clone git@infapghp01.shaklee.com:GlobalProject/shaklee-auth-server.git
+screen -s AuthScreen ./activator -Dhttp.port=9009 -Dcoordination-service.connectionString=10.24.23.8:2181 -Deureka.name=oauth-service -Deureka.port=9009 run
+
+git clone git@infapghp01.shaklee.com:GlobalProject/shaklee-api-gateway.git
+screen -s APIGateScreen ./activator -Dhttp.port=9000  -Dcoordination-service.connectionString=10.24.23.8:2181 run 
+
+git clone git@infapghp01.shaklee.com:GlobalProject/shaklee-oauth-util.git
+git clone git@infapghp01.shaklee.com:GlobalProject/shaklee-service-registrar-plugin.git
+git clone git@infapghp01.shaklee.com:GlobalProject/shaklee-dynamic-config-plugin.git
+git clone git@infapghp01.shaklee.com:GlobalProject/shaklee-dynamic-config-datastore.git
+
+
+git clone git@infapghp01.shaklee.com:GlobalProject/shaklee-customer-management.git
+screen -s CustScreen ./activator -Dhttp.port=9001 -Deureka.name=users-service -Deureka.port=9001 -Dcoordination-service.connectionString=10.24.23.8:2181 run
+
+git clone git@infapghp01.shaklee.com:GlobalProject/shaklee-shopping-cart.git
+screen -s ShoppingScreen ./activator -Dhttp.port=9002 -Deureka.name=cart-service -Deureka.port=9002 -Dcoordination-service.connectionString=10.24.23.8:2181 run
+
+git clone git@infapghp01.shaklee.com:GlobalProject/shaklee-master-data.git
+screen -s MasterScreen ./activator -Dhttp.port=9003 -Deureka.name=mdm-service -Deureka.port=9003 -Dcoordination-service.connectionString=10.24.23.8:2181 run
+
+git clone git@infapghp01.shaklee.com:GlobalProject/shaklee-activity-management.git
+screen -s ActivatorScreen ./activator -Dhttp.port=9004 -Deureka.name=activity-service -Deureka.port=9004 -Dcoordination-service.connectionString=10.24.23.8:2181 run
+
+git clone git@infapghp01.shaklee.com:GlobalProject/shaklee-pricing-management.git
+./activator -Dhttp.port=9007 -Deureka.name=pricing-service -Deureka.port=9007 -Dcoordination-service.connectionString=10.24.23.8:2181 run
+
+git clone git@infapghp01.shaklee.com:GlobalProject/shaklee-order-processor.git
+./activator -Dhttp.port=9008 -Deureka.name=order-service -Deureka.port=9008 -Dcoordination-service.connectionString=10.24.23.8:2181 run
+
+git clone git@infapghp01.shaklee.com:GlobalProject/shaklee-promotion-management.git
+./activator -Dhttp.port=9013 -Deureka.name=promotion-service -Deureka.port=9013 -Dcoordination-service.connectionString=10.24.23.8:2181 run
+=====================================================================================
+
+
+screen -s DynamicScreen ./activator -Dhttp.port=9015 -Dcoordination-service.connectionString=10.24.21.34:2181 -Dshaklee.config.server.git.uri=/shaklee/service/shaklee-dynamic-config-datastore -Dshaklee.config.env="qa" run
+
+screen -s AuthScreen ./activator -Dhttp.port=9009 -Dcoordination-service.connectionString=10.24.21.34:2181 -Deureka.name=oauth-service -Deureka.port=9009 run
+
+screen -s APIGateScreen ./activator -Dhttp.port=9000  -Dcoordination-service.connectionString=10.24.21.34:2181 run 
+
+=========================
+bin/zkServer.sh start
+
+echo stat | nc localhost 2181 | grep Mode
+Mode: leader
+Mode: follower
+Mode: standalone
+
+
+chmod -R 777 /shaklee
+bin/zkServer.sh start-foreground
+remove a foler--->rm -rf letters/
+netstat -plten |grep java --->get all java running process
+sudo netstat -nlp | grep 8080 ---> get services running on port 8080
+echo ruok | nc 128.0.0.1 2181
+echo status | nc zkserver1 2181
+
+lsb_release -a ------>get the os details
+
+sudo iptables -I INPUT 1 -p tcp --dport 9100 -j ACCEPT
+sudo service iptables save
+sudo service iptables -L -n
+
+git stash
+git pull origin
+git stash pop
+
+to kill a process running on port
+FOR /F "tokens=5 delims= " %P IN ('netstat -a -n -o ^| findstr :9000') DO TaskKill.exe /PID %P /T /F
+
+yum install screen
+screen -s screenname command
+crtl a d--->exit

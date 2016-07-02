@@ -1,0 +1,45 @@
+wifi... name:skgst12 pwd:sk52887209
+
+cls_smtp.php       -->smpt configured and pointing localhost...
+
+
+node.js --> server for javascript... swagger needs node.js for web service api exposing
+
+swagger ui
+swagger editor
+swagger sdk generator
+
+chef - 
+
+Swagger Part
+1) Download Swagger UI.
+2) install nodejs "https://nodejs.org/download/". It has nodejs has npm.
+	If we use, nodejs to rebuild the swagger. It updates the index.html with the updated API. But it doesnt go to any server where I can launch it.
+3) docker "https://docs.docker.com/installation/windows/"
+
+What is Docker?
+Docker is, in its own words, “an open platform for developers and sysadmins to build, ship, and run distributed applications”. In other, simpler words, Docker is a container manager. Note that it’s not a virtualization solution that abstracts away the underlying OS or hardware, like the well-known VirtualBox, but an engine to package an individual application system to run in its own particular environment.
+
+what is npm?
+npm is a NodeJS package manager. As its name would imply, you can use it to install node programs. Also, if you use it in development, it makes it easier to specify and link dependencies.
+npm makes it easy for JavaScript developers to share and reuse code, and it makes it easy to update the code that you're sharing.
+
+asynchronouseIO : Play supports asynchronous IO on server side. Ex: 100 requestst comes to Controller and Controller wants to talks to Service deployed on different machines. Play will reduce the network traffic by keeping all the request in queue, then calls service one by one to avoid the network traffic. Play controller will get the 
+
+
+sudo docker build --tag="swagger-ui-builder" -f Dockerfile "/c/Users/Thangaprabhu/Desktop/swagger-ui-master"
+docker run -p 127.0.0.1:9990 swagger-ui-builder
+
+git clone --recursive https://github.com/swagger-api/swagger-ui.git swagger-ui ----> download swagger-ui
+
+rm -rf C:* ----> remove a directory
+
+PHP Debug---->
+phpstorm
+zend server
+6.3 and 5.3
+
+Including the Cache Framework:
+CMC-65 Get Personal Information - On giving the blank value  it is giving 404
+1) Micro-service should include the cache plugin
+2) Classes of Micro-Service should import com.shaklee.cache.Cache

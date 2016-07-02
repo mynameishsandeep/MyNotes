@@ -1,0 +1,15 @@
+GAVS
+============
+1) Generics is applied to which part of class? class, instance variable and method
+
+2) which collection is best for searching ? if we use list... it is a linear search only... Utility like Collections.search() not efficient
+	option 1) If you want dont want duplicates go for hashSet.It gives O(1)
+	option 2) Use arrayList to store. During search. Put in to Set and get it.
+	option 3) If you want duplicates to be maintained. Create hashMap like 
+	
+	Map<String, Integer> hashMap = new HashMap<String, Integer>();
+
+add custom logic to insert (i.e) if hashMap contains key increase the integer count by 1. 
+So searching will result in O(1)+ O(1 or 2) based on logic..
+
+http://stackoverflow.com/questions/1062960/map-implementation-with-duplicate-keys

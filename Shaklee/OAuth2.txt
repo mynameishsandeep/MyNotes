@@ -1,0 +1,18 @@
+header
+payload
+
+secretkey - 60.
+
+accesstokentoken - 15
+
+
+
+------- xxx.yyy.zzz
+
+
+header --> type=jwt, alg: HSA256,
+
+secret key--UUID ... 
+
+every 15 minutes accesstoken will change
+every 60 minutes secret key will change...new accesstoken formed with new secret key...

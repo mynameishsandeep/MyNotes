@@ -1,0 +1,36 @@
+package com.csscorp.business.bean;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+public class HashMapKeyAsInt {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		int a = 10;
+		List<String> l = new ArrayList();
+		l.add("data1");
+		l.add("data2");
+		Map<Integer,List> map = new HashMap<Integer, List>(); 
+		map.put(a, l);
+		
+		for (Iterator it = map.entrySet().iterator(); it.hasNext();) {
+			Map.Entry entry = (Map.Entry) it.next();   
+			String key = entry.getKey().toString();   
+			List<String> value = (List<String>)entry.getValue();
+			System.out.println(key);
+			for(String data : value) {
+				System.out.println(data);
+			}
+			
+		}
+		
+		
+	}
+
+}

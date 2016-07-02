@@ -1,0 +1,63 @@
+When and how do you optimize your code
+
+how many ways you can create object in java
+ four different ways 
+1) MyObject object = new MyObject();
+2) MyObject object = (MyObject) Class.forName("subin.rnd.MyObject").newInstance();
+3) MyObject anotherObject = new MyObject();
+MyObject object = anotherObject.clone();
+4) ObjectInputStream inStream = new ObjectInputStream(anInputStream );
+MyObject object = (MyObject) inStream.readObject();
+
+What is the most difficult situation handled by you
+
+ajax in java
+
+custom annotation
+
+Why String has been made immutable in Java?
+	1) 80% Objects in java are Strings. For memory efficiency.
+	2) Security purpose......
+
+Shallow Cloning vs deep cloning.
+Shallow cloning-->the cloned object also refers to the same object to which the original object refers.so changes in cloned object will change the original object also. shallow cloning will cause Memory Leak in java. Use Profiler. Shallow Cloning is default in java. If you want to clone reference variable also go for deep cloning.
+
+
+Explain class loader in java
+Each Java class must be loaded by a class loader.[2] Furthermore, Java programs may make use of external libraries (that is, libraries written and provided by someone other than the author of the program) or they may be composed, at least in part, of a number of libraries.
+When the JVM is started, three class loaders are used[3][4]:
+Bootstrap class loader
+Extensions class loader
+System class loader
+
+copy is deep copy for primitives
+http://geekexplains.blogspot.com/2008/06/difference-between-shallow-copy-and.html
+
+
+Web services pass XML data over Web protocols (HTTP, SNMP, etc).
+The RMI protocol passes serialized Java objects over JRMP.
+
+RAD gives you(Full IDE for J2EE, Web Services, database + WAS 6.0)
+Modelling Tool + RAD + a little bit more stuff = RSA (Architect).
+
+
+Is that singleton object is cloneble.
+Yes. if the singleton class implements cloneable and overrides clone method. But
+the Singleton design pattern and the Cloneable Java interface are at odds with one another. 
+we can avoid clone differently by implementing clone in singleton class and inside clone method
+throw exception.
+General clone implementation
+============================
+protected Object clone()throws CloneNotSupportedException   
+{   
+ //return singleton object from clone ALSO   
+  return getInstance();   
+}  
+Singleton clone implementation
+===============================
+protected Object clone()throws CloneNotSupportedException   
+{   
+  throw new CloneNotSupportedException("Cloning not allowed");   
+}
+
+ 

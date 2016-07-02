@@ -1,0 +1,17 @@
+Promotion Engine : Eric
+Rules.
+Ex; For 200 shipping free. Tell customer you bought for 190, buy 10$ more
+Java WebService. It 
+
+More than 150+ Rulesets are formed and inserted into db. When user logs in promotion engine loaded and calls db for rules.
+
+1) Tell people they are eligible for Promo.
+2) 
+
+java cache...
+
+doclet....
+
+time as argument for promos service for testing.... if left blank, take it from DB. Uses:Testing future promotion.
+
+Ex: Offer Promotion to user whover there in system for more than 2 year.More users were came.. THen add one more rule to the promotion whoever bought product for more than 1000$.

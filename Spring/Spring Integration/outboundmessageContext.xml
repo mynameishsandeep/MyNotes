@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:si="http://www.springframework.org/schema/integration"
+	xmlns:jms="http://www.springframework.org/schema/integration/jms"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ 			http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/integration
+			http://www.springframework.org/schema/integration/spring-integration-2.2.xsd
+			http://www.springframework.org/schema/integration/jms
+			http://www.springframework.org/schema/integration/jms/spring-integration-jms-2.2.xsd
+			http://www.springframework.org/schema/context
+			http://www.springframework.org/schema/context/spring-context.xsd
+			http://www.springframework.org/schema/jee
+	   		http://www.springframework.org/schema/jee/spring-jee-3.0.xsd" >
+
+	<si:annotation-config />
+	<jee:jndi-lookup id="connectionFactory" jndi-name="java:comp/env/jms/mqConnectionFactory" />  
+	<jee:jndi-lookup id="serviceReqQueue" jndi-name="java:comp/env/jms/serviceReqQueue" />  
+	<jee:jndi-lookup id="serviceResQueue" jndi-name="java:comp/env/jms/serviceResQueue" />
+	<context:component-scan base-package="com.altipay" />
+	
+	<bean id="serviceAdapter" class="com.altipay.util.client.adapter.impl.ServiceAdapterImpl" />
+	
+	<si:channel id="clientServiceReqChannel" />
+	<si:channel id="clientServiceResChannel" />
+	<si:channel id="clientServiceErrorChannel" />
+	
+	<si:gateway id="serviceGateway" service-interface="com.altipay.util.client.adapter.impl.ServiceGateway" 
+	default-request-channel="clientServiceReqChannel" default-reply-channel="clientServiceResChannel" error-channel="clientServiceErrorChannel"/> 	 
+	
+	<jms:outbound-gateway id="jmsout" request-destination="serviceReqQueue"  reply-destination="serviceResQueue"
+	                     request-channel="clientServiceReqChannel" receive-timeout="-1"
+	                     time-to-live="6000" explicit-qos-enabled="true" />
+	<si:service-activator input-channel="clientServiceErrorChannel" output-channel="clientServiceResChannel" ref="clientMessageErrorHandler" method="handleServiceError" />
+	<bean id="clientMessageErrorHandler" class="com.altipay.util.client.ClientMessageErrorHandler" />
+
+</beans>

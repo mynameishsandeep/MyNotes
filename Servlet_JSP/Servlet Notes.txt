@@ -1,0 +1,22 @@
+the purpose of SingleThreadModel(STM) is to provide concurrency proof to the instance variable.
+implementing SingleThreadModel by the user servlet..The servlet vendor can give 2 solution 1) create instance for every servlet request 2) process 1 request at a time, queue all other and process one by one.
+
+if u are getting the requestdispatcher from servlet, then provide relative path.
+if u are getting the requestdispatcher from application context then provide absolute path that starts with /
+
+clustered environment, load balancing, multiple web server, app runs on 2 JVM, only session object can be transferred. All other objects like servletContext, servletConfig are loaded individually from JVM1 and JVM2 since they are same across web server.
+
+set session timeout to -1 to makeit never expire.
+
+when a session moves from 1 JVM to another all session attributes that are serializable are moved automatically. The non-serializable objects needs to moved manually through sessionactivationlistener
+
+Scriptlet: <% %>
+Directive: <%@ %>
+	1) include
+	2) Page import
+	3) taglib
+Expression: <%= %>
+Declaration: <%! %>
+comment: <%-- --%>
+
+jsp standard action can't retrieve property of property EX: Employee class, name String is sucesss. But if Employee has another object then fails and EL saves the day.

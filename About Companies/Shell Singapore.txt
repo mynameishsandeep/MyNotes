@@ -1,0 +1,25 @@
+Shell Infotech is pleased to inform you regarding a job opening with one of our client based in Singapore. Please find the following info and reply as soon as possible. 
+
+Employer: Shell Infotech Pte Ltd (Candidate selected will be under the payrolls of shell Infotech) 
+Client: IT Services Company 
+Role: J2EE/Middleware Developer 
+7+ years of software development experience. 
+*Must possess very strong Java (5.0 & 6.0) programming skills. 
+*Must have good development experience on Web Services architecture (WS-*) built on BEA WebLogic Server (WLS) or JBoss or WebSphere. 
+*Must have extensive hands-on experience with J2EE stack (including JMS, Web Services, JDBC, Servlets, EJB, JMX etc) 
+*Must have hands-on experience with Spring and Hibernate frameworks. Must be strong in SpringWS, JAXB2, XML/XPath/XQuery. 
+*Must have strong Experience/Knowledge on Database modeling, Database interaction, SQL, Stored Procedure and ORM. 
+*Must have extensive understanding of OO concepts (including OO analysis & design). 
+*Must be Detail Oriented having extensive Integration and Backend coding experience. 
+*Must be able to write Effective Unit Test cases using JUnit and TestNG. 
+*Must have experience developing with Eclipse (Weblogic Workshop) based tools. 
+*Experience with Maven2, SVN and Atlassian suite (Bamboo, Jira and Confluence) are preferred.
+
+Please reply with your updated profile along with the following info 
+Exp in J2EE stack (including JMS, Web Services, JDBC, Servlets, EJB, JMX etc) 
+Experience in Web Services architecture (WS-*) built on BEA WebLogic Server (WLS) or JBoss or WebSphere: 
+Experience in SpringWS, JAXB2, XML/XPath/XQuery: 
+Current Salary: 
+Expected Salary in Singapore Dollar : 
+Notice Period (Max 15 days) : 
+Are you ready to work for 1yr contract mode: 

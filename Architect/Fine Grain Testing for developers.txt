@@ -1,0 +1,10 @@
+Fine Grain Testing to be done by the Developers
+1) Ribbon (Load Balancer)/Eureka/Circuit Breaker test: Run 5 instance for an customer service.
+Under customer service controller add 2 method exit() and infinite loop() and implement it. Call this controller from request.
+Here after this instance should not be called by Ribbon and these 2 instance should be marked for deletion.
+2) Stop the DataBase and verify application returns proper error messages.
+3) Stop the Auth-Server and verify application status response
+4) Stop the Dynamic Config Server and verify application status response
+5) Stop the Eureka and verify application status response
+6) Stop the ZooKeeper and verify application status response
+7) Database is shared by all Services or each micro service is having individual db

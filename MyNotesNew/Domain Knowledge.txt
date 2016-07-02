@@ -1,0 +1,4 @@
+BFSI(Banking, Financial Services and Insurance)(THI)
+ManLog(Manufacturing and Logistics)(FMS NGAVS)
+HR domain(HRMS)
+system Domain(Marimba)

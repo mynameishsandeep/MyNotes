@@ -1,0 +1,10 @@
+CAP Theorem
+Consistency
+Availability
+Partition Tolerance
+
+Partition Tolerance means that the cluster continues to function even if there is a "partition" (communications break) between two nodes (both nodes are up, but can't communicate).
+
+Scenario 1) In a centralized database Consistency and Availability(2 or more database is configure. 1 will be the master other will be in slave. Only 1 will be active at all time) is met. But Partition Tolerance is missed
+
+Scenario 2) In a distribute database. Consistency is difficult to achieve but Availability and Partition Tolerance is achieved.

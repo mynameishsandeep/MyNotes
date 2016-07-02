@@ -1,0 +1,13 @@
+1) How will you read a very big file from Hard Disk and save into Database?
+Lets say the data is an consumer information with multiple rows. Name, PAN number, date of expiry of card, cvv etc..
+1) Read the file using FileChannel. Provides parallelism cabability
+2) Read the file with RandomDataFile. Multiple threads can access the file.Ex: Thread1 1st line to 1000, Thread2 1001 to 2000 etc..
+3) Use Hibernate Entity object for saving
+4) Use PreparedStatement that can avoid creating sql statement 
+5) Use Temporary tables (GTT) in dbside which fastens rollback.
+6) Use caching for
+
+2) Multiple producers and consumers are placing data on queue. How to avoid concurrency issue?
+LinkedList is an implementation of Queue. 
+Use Collections.synchronized(linkedList).
+Java has ConcurrentLinkedQueue which does better.
