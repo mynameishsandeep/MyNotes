@@ -1,0 +1,136 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fswiss\fcharset0 Helvetica-Light;\f2\fnil\fcharset0 Monaco;
+\f3\fmodern\fcharset0 Courier;\f4\fnil\fcharset0 HelveticaNeue;\f5\fswiss\fcharset0 ArialMT;
+\f6\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red15\green112\blue1;\red87\green87\blue87;\red53\green53\blue53;
+}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf0 \CocoaLigature0 partnerQueryService is the project from FGW which will call OrderService for getOrders, getAllOrders, getAllReleasedOrders etc\'85\
+OrderService calls OMS, fulfillment Systems, PGOMS which is abstracted because we call only Order Service.\
+\
+This projects exposes 7 apis which will be consumed by suppliers. Consumers or users cannot use this application. Consumers are exposed through front-end which is a separate system. \
+FGW helps suppliers to create products or items, update prices, quantity etc\'85, through Item Ingestor, Price Ingestor, Inventory ingestor\
+FGW helps suppliers to get, update  details of products through partnerQueryService.\
+\
+MarketPlace(MP) products. Products from external vendors/partners/sellers/suppliers. Currently 200 partners are supported. The technology is limiting to onboard suppliers. Goal is to make 3000 suppliers, just like how amazon does it.\
+\
+DotCom(.com) products, products present and sold by Walmart inventory. It was stabilized and not much needed.\
+\
+Kafka reduces the bottleneck by holding all the data\'85 Consumer has an SLA of 15 minutes to consume all the message. If the same needs to be done through WebService calls, it cannot be done because client cannot wait for all the data to be processed.\
+Kafka Usage 1) Log messages are split into server log and logmon log. Logmon logs are placed in Kafka and consumer read, index and place it in centralized logging. \
+Kafka Usage 2) Product information is sent as file in Rest service. Rest Service will place the data to Kafka. For 1000 product there will be 1000 offset in an partition. \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs28 \cf0 \expnd0\expndtw0\kerning0
+\CocoaLigature1 over cassandra, cQl is placed to behave like standard ORM and sql queries. Even DDL DML is similar to SQL for cassandra because of solar and cQl frameworks\
+\
+oneops or opscenter for managing schema of Cassandra\
+\
+cassandra pushing the schema changes on one node will replicate to all nodes\
+\
+deployment has 8 nodes. During deployment at a time it will shutdown 2 nodes update project start. Do for other 6. to avoid downtime\
+\
+pebl is used to deploy changes to stage\'85 Click Button(Settings) under Actions \'93trigger pipeline\'94.Approve.\
+oneops is used for deploy changes to prod\'85 go to specific assembly, transition, under orderqueryservice ,,, click tab \'93variables\'94\'85 change the appVersion variable to whatever the version in master or in specific release\'85 save\'85deploy\'85\
+\
+\
+Cassandra and Solar or Cassandra and elastic search\
+Cassandra has mostly has 1 index on a table\'85 \
+Solar provide additional index on the table\'85\
+Solar replicates the data from cassandra and keeps its own\'85\
+Cassandra can be installed plain. Cassandra can be installed with Solar. Cassandra can be installed with ElasticSearch..\
+\
+When schema is updated in Cassandra. Update the solar schema, update the index search on the specific column to true. Update on 1 node and specify distribution=true which will replicate to all nodes.\
+Execute the script to run the schema, which will update the solar cassandra db, thereafter we can search on the new key.\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs22 \cf0 \kerning1\expnd0\expndtw0 \
+pssh(parallel SSH) command to login to multiple machine and do search of log file. \
+\pard\pardeftab720\partightenfactor0
+
+\f0 \cf0 \expnd0\expndtw0\kerning0
+pssh -h /Users/tchandr/projects/walmart/prod_orderServices_Boxes.txt -l app -i -o ~/logs "cat /log/apache-tomcat/catalina.out|grep --color=always '
+\f3\fs24 \cf2 Failed when called getAllOrders. Orders not found for given search parameters
+\f0\fs22 \cf0 '"| grep -v FAILURE:q!\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+
+\f0 \cf0 \CocoaLigature0 pssh -l app -h /Users/tchandr/projects/walmart/prod_orderServices_Boxes.txt -i  "cat /log/logmon/partner-query-service-app.log* | grep -i -C 5 --color=always 'Failed when called getAllOrders. Orders not found for given search parameters'" >/Users/tchandr/projects/walmart/ObjParamNotNullIssue.log
+\f4\fs30 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+\pard\pardeftab720\sl340\partightenfactor0
+
+\f2\fs22 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 CassandraSolrConfig\'97> This class has the connection information(username, password, keyspace, dataCenterName, clusterName, cassandraPort, thriftPort, readConsistency, writeConsistency, min max solar cassandra connections on the pool etc.. ) for Cassandra and Solar which is loaded from CCM. \
+\
+Login to a stage server \'97\'97  ssh app@ipaddress\
+\
+\
+DataStax has a driver which attach Solar to Cassandra for adding index to Solar. So all writes will go to Cassandra and reads will go to Solar. \
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul \ulc0 Number of Nodes for Cassandra and Solar\ulnone \
+In the 4 ring 2 rings are Cassandra only and 2 rings are cassandra and Solar.\
+Ring 1 : DAL - Dallas Cassandra and Solar\
+Ring 2 : DALCASS - Dallas Cassandra\
+Ring 3 : DFW - 
+\f5\b\fs20 \cf3 \expnd0\expndtw0\kerning0
+Dallas\'96Fort Worth 
+\f2\b0\fs22 \cf0 \kerning1\expnd0\expndtw0 Cassandra and 
+\f5\b\fs20 \cf3 \expnd0\expndtw0\kerning0
+Solar
+\f2\b0\fs22 \cf0 \kerning1\expnd0\expndtw0 \
+Ring 4 : DFWCASS - 
+\f5\b\fs20 \cf3 \expnd0\expndtw0\kerning0
+Dallas\'96Fort Worth Cassandra \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs22 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f6\b\fs24 \cf4 \ul \ulc4 Number of Tomcat Nodes
+\b0 \ulnone \
+2 datacenter, 4 nodes in a datacenter, 2 machine in a cluster, total 8 nodes,\
+test the api on individual machine.\
+test the api at cluster\
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f1\fs28 \cf0 \expnd0\expndtw0\kerning0
+test the api at FQDN 
+\f0\fs22 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f5\fs24 \cf0 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f1\fs28 \cf0 df -h \'97>to verify the disk size allotted to folders\
+\
+\pard\pardeftab720\sl384\partightenfactor0
+
+\f3\fs24 \cf2 \
+For the last 1 hour \
+created_dtm :[2016-07-08T18:00:00Z TO NOW]\
+
+\f1\fs28 \cf0 \
+pom dependency management\
+runtime error \'97> apache thrift\
+what is snapshot version in maven? Lets say I am doing a platform-code changes which is used my multiple projects. I will push my changes into snapshot. I will not the release the project. Other projects will use only the release version of project. So once testing is done, we can release the project.\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 Scribe Log Location: /log/scribe/secondary_buffer/tag-service\
+\
+Pebl Jenkins Build updates the pom.xml, artifact version every a commit is pushed into repository. So developer don\'92t have to bother about artifact version of application.\
+For war build, create snapshot push to artifact, create a release version push to artifact, deploy it on stage\
+For jar build, create snapshot push to artifact, create a release version push to artifact.}

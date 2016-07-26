@@ -1,0 +1,95 @@
+<!--
+Licensed to the Apache Software Foundation (ASF) under one or more
+ contributor license agreements.  See the NOTICE file distributed with
+ this work for additional information regarding copyright ownership.
+ The ASF licenses this file to You under the Apache License, Version 2.0
+ (the "License"); you may not use this file except in compliance with
+ the License.  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<schema name="order_audit" version="1.5">
+    <types>
+        <fieldType name="uuid" class="solr.UUIDField" multiValued="false" docValues="true"/>
+        <fieldType name="StrCollectionField" class="solr.StrField" multiValued="true" docValues="true"/>
+        <fieldType name="MultiValuedDynamicField" class="solr.TextField" multiValued="false">
+            <analyzer>
+                <tokenizer class="solr.PatternTokenizerFactory" pattern=";;*" />
+                <filter class="solr.LowerCaseFilterFactory"/>
+            </analyzer>
+        </fieldType>
+        <fieldType name="string" class="solr.StrField" sortMissingLast="true" omitNorms="true" multiValued="false" docValues="true"/>
+        <fieldType name="stringwithoutdoc" class="solr.StrField" sortMissingLast="true" omitNorms="true" multiValued="false"/>
+
+        <!-- boolean type: "true" or "false" -->
+        <fieldType name="boolean" class="solr.BoolField" sortMissingLast="true" omitNorms="true" multiValued="false" />
+        <!--Binary data type. The data should be sent/retrieved in as Base64 encoded Strings -->
+        <fieldtype name="binary" class="solr.BinaryField" multiValued="false" docValues="true"/>
+        <fieldType name="int" class="solr.TrieIntField" precisionStep="0" omitNorms="true" positionIncrementGap="0" multiValued="false" docValues="true"/>
+        <fieldType name="float" class="solr.TrieFloatField" precisionStep="0" omitNorms="true" positionIncrementGap="0" multiValued="false" docValues="true"/>
+        <fieldType name="long" class="solr.TrieLongField" precisionStep="0" omitNorms="true" positionIncrementGap="0" multiValued="false" docValues="true"/>
+        <fieldType name="double" class="solr.TrieDoubleField" precisionStep="0" omitNorms="true" positionIncrementGap="0" multiValued="false" docValues="true" />
+        <fieldType name="tint" class="solr.TrieIntField" precisionStep="8" omitNorms="true" positionIncrementGap="0" multiValued="false" docValues="true"/>
+        <fieldType name="tfloat" class="solr.TrieFloatField" precisionStep="8" omitNorms="true" positionIncrementGap="0" multiValued="false" docValues="true"/>
+        <fieldType name="tlong" class="solr.TrieLongField" precisionStep="8" omitNorms="true" positionIncrementGap="0" multiValued="false" docValues="true"/>
+        <fieldType name="tdouble" class="solr.TrieDoubleField" precisionStep="8" omitNorms="true" positionIncrementGap="0" multiValued="false" docValues="true"/>
+        <fieldType name="date" class="solr.TrieDateField" omitNorms="true" precisionStep="0" positionIncrementGap="0" multiValued="false" docValues="true"/>
+        <!-- A Trie based date field for faster date range queries and date faceting. -->
+        <fieldType name="tdate" class="solr.TrieDateField" omitNorms="true" precisionStep="6" positionIncrementGap="0" multiValued="false" docValues="true"/>
+        <fieldType name="pint" class="solr.IntField" omitNorms="true" multiValued="false" docValues="true"/>
+        <fieldType name="plong" class="solr.LongField" omitNorms="true" multiValued="false" docValues="true"/>
+        <fieldType name="pfloat" class="solr.FloatField" omitNorms="true" multiValued="false" docValues="true"/>
+        <fieldType name="pdouble" class="solr.DoubleField" omitNorms="true" multiValued="false" docValues="true"/>
+        <fieldType name="pdate" class="solr.DateField" sortMissingLast="true" omitNorms="true" multiValued="false" docValues="true"/>
+        <fieldType name="sint" class="solr.SortableIntField" sortMissingLast="true" omitNorms="true" multiValued="false" docValues="true"/>
+        <fieldType name="slong" class="solr.SortableLongField" sortMissingLast="true" omitNorms="true" multiValued="false" docValues="true"/>
+        <fieldType name="sfloat" class="solr.SortableFloatField" sortMissingLast="true" omitNorms="true" multiValued="false" docValues="true"/>
+        <fieldType name="sdouble" class="solr.SortableDoubleField" sortMissingLast="true" omitNorms="true" multiValued="false" docValues="true"/>
+        <fieldType name="random" class="solr.RandomSortField" indexed="true" multiValued="false" docValues="true"/>
+        <fieldType name="text" class="solr.TextField" multiValued="true"  omitNorms="true" >
+            <analyzer>
+                <tokenizer class="solr.StandardTokenizerFactory"/>
+            </analyzer>
+        </fieldType>
+        <fieldType name="text_search" class="solr.TextField" positionIncrementGap="100" autoGeneratePhraseQueries="true" multiValued="true" omitNorms="true" >
+            <analyzer type="index">
+                <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+                <filter class="solr.LowerCaseFilterFactory"/>
+                <filter class="solr.ReversedWildcardFilterFactory"/>
+                <filter class="solr.WordDelimiterFilterFactory" splitOnNumerics="0" generateWordParts="1" generateNumberParts="0" catenateWords="1" catenateNumbers="1" catenateAll="1" splitOnCaseChange="0" preserveOriginal="1"/>
+                <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
+            </analyzer>
+            <analyzer type="query">
+                <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+                <filter class="solr.LowerCaseFilterFactory"/>
+                <filter class="solr.ReversedWildcardFilterFactory"/>
+                <filter class="solr.WordDelimiterFilterFactory" splitOnNumerics="0" generateWordParts="1" generateNumberParts="0" catenateWords="1" catenateNumbers="1" catenateAll="1" splitOnCaseChange="0" preserveOriginal="1"/>
+                <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
+            </analyzer>
+        </fieldType>
+    </types>
+
+    <fields>
+	    <field name="purchase_order_no" type="string" indexed="true" stored="true" required="true"  docValues="true"/> 
+	    <field name="apiname" type="string" indexed="true" stored="true" required="true"  docValues="true"/> 
+	    <field name="created_dtm" type="tdate" indexed="true" stored="true" required="true"  docValues="true"/>
+	    <field name="status" type="string" indexed="true" stored="true" required="true"  docValues="true"/>
+	    <field name="consumer_id" type="string" indexed="true" stored="true" required="true"  docValues="true"/>
+	    <field name="partner_id" type="string" indexed="true" stored="true" required="true"  docValues="true"/>
+	    <field name="seller_id" type="string" indexed="true" stored="true" required="true" />
+	    <field name="sales_order_no" type="string" indexed="true" stored="true" required="true"  docValues="true"/> 
+	    <field name="request" type="string" indexed="false" stored="true" required="true"  docValues="true"/>
+	    <field name="response" type="string" indexed="false" stored="true" required="true"  docValues="true"/>
+	    <field name="error_code" type="string" indexed="false" stored="true" required="true"  docValues="true"/>
+	    <field name="channel_type" type="string" indexed="false" stored="true" required="true"  docValues="true"/>
+	    <field name="error" type="string" indexed="false" stored="true" required="true"  docValues="true"/>
+    </fields>
+    <defaultSearchField>purchase_order_no</defaultSearchField>
+    <uniqueKey>(purchase_order_no,status,apiname,created_dtm)</uniqueKey>
+</schema>

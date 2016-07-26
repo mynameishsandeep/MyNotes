@@ -1,0 +1,50 @@
+
+#DEV enviroment
+curl  http://10.247.198.239:8983/solr/resource/glb_partner_api_orders_dev.order_audit_new/solrconfig.xml --data-binary @solrconfig.xml -H 'Content-type:text/xml; charset=utf-8'
+curl  http://10.247.198.239:8983/solr/resource/glb_partner_api_orders_dev.order_audit_new/schema.xml --data-binary @schema.xml -H 'Content-type:text/xml; charset=utf-8'
+curl "http://10.247.198.239:8983/solr/admin/cores?action=CREATE&name=glb_partner_api_orders_dev.order_audit_new&distributed=true"
+curl "http://10.247.198.239:8983/solr/admin/cores?action=RELOAD&name=glb_partner_api_orders_dev.order_audit_new&distributed=true"
+
+#QA enviroment
+curl  http://10.247.198.239:8983/solr/resource/glb_partner_api_orders_qa.order_audit_new/solrconfig.xml --data-binary @solrconfig.xml -H 'Content-type:text/xml; charset=utf-8'
+curl  http://10.247.198.239:8983/solr/resource/glb_partner_api_orders_qa.order_audit_new/schema.xml --data-binary @schema.xml -H 'Content-type:text/xml; charset=utf-8'
+curl "http://10.247.198.239:8983/solr/admin/cores?action=CREATE&name=glb_partner_api_orders_qa.order_audit_new&distributed=true"
+curl "http://10.247.198.239:8983/solr/admin/cores?action=RELOAD&name=glb_partner_api_orders_qa.order_audit_new&distributed=true"
+
+
+#STG0 enviroment
+curl  http://10.247.198.239:8983/solr/resource/glb_partner_api_orders_stg0.order_audit_new/solrconfig.xml --data-binary @solrconfig.xml -H 'Content-type:text/xml; charset=utf-8'
+curl  http://10.247.198.239:8983/solr/resource/glb_partner_api_orders_stg0.order_audit_new/schema.xml --data-binary @schema.xml -H 'Content-type:text/xml; charset=utf-8'
+curl "http://10.247.198.239:8983/solr/admin/cores?action=CREATE&name=glb_partner_api_orders_stg0.order_audit_new&distributed=true"
+curl "http://10.247.198.239:8983/solr/admin/cores?action=RELOAD&name=glb_partner_api_orders_stg0.order_audit_new&distributed=true"
+
+
+#STG1 enviroment
+curl  http://10.247.198.239:8983/solr/resource/glb_partner_api_orders_stg1.order_audit_new/solrconfig.xml --data-binary @solrconfig.xml -H 'Content-type:text/xml; charset=utf-8'
+curl  http://10.247.198.239:8983/solr/resource/glb_partner_api_orders_stg1.order_audit_new/schema.xml --data-binary @schema.xml -H 'Content-type:text/xml; charset=utf-8'
+curl "http://10.247.198.239:8983/solr/admin/cores?action=CREATE&name=glb_partner_api_orders_stg1.order_audit_new&distributed=true"
+curl "http://10.247.198.239:8983/solr/admin/cores?action=RELOAD&name=glb_partner_api_orders_stg1.order_audit_new&distributed=true"
+
+
+#PQA enviroment
+curl  http://10.247.198.239:8983/solr/resource/glb_partner_api_orders_pqa.order_audit_new/solrconfig.xml --data-binary @solrconfig.xml -H 'Content-type:text/xml; charset=utf-8'
+curl  http://10.247.198.239:8983/solr/resource/glb_partner_api_orders_pqa.order_audit_new/schema.xml --data-binary @schema.xml -H 'Content-type:text/xml; charset=utf-8'
+curl "http://10.247.198.239:8983/solr/admin/cores?action=CREATE&name=glb_partner_api_orders_pqa.order_audit_new&distributed=true"
+curl "http://10.247.198.239:8983/solr/admin/cores?action=RELOAD&name=glb_partner_api_orders_pqa.order_audit_new&distributed=true"
+
+
+#EBF enviroment
+curl  http://10.65.97.128:8983/solr/resource/glb_partner_api_orders_ebf.order_audit_new/solrconfig.xml --data-binary @solrconfig.xml -H 'Content-type:text/xml; charset=utf-8'
+curl  http://10.65.97.128:8983/solr/resource/glb_partner_api_orders_ebf.order_audit_new/schema.xml --data-binary @schema.xml -H 'Content-type:text/xml; charset=utf-8'
+curl "http://10.65.97.128:8983/solr/admin/cores?action=CREATE&name=glb_partner_api_orders_ebf.order_audit_new&distributed=true"
+curl "http://10.65.97.128:8983/solr/admin/cores?action=RELOAD&name=glb_partner_api_orders_ebf.order_audit_new&distributed=true"
+
+
+
+
+#PROD enviroment
+curl  -u FEEDAPIAPP:apifeed http://10.65.205.147:8983/solr/resource/glb_partner_api_orders.order_audit_new/solrconfig.xml --data-binary @solrconfig.xml -H 'Content-type:text/xml; charset=utf-8'
+curl  -u FEEDAPIAPP:apifeed http://10.65.205.147:8983/solr/resource/glb_partner_api_orders.order_audit_new/schema.xml --data-binary @schema.xml -H 'Content-type:text/xml; charset=utf-8'
+curl  -u FEEDAPIAPP:apifeed  "http://10.65.205.147:8983/solr/admin/cores?action=CREATE&name=glb_partner_api_orders.order_audit_new&distributed=true"
+curl  -u FEEDAPIAPP:apifeed "http://10.65.205.147:8983/solr/admin/cores?action=RELOAD&name=glb_partner_api_orders.order_audit_new&distributed=true"
+
