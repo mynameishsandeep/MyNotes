@@ -1,10 +1,5 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
-{\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\froman\fcharset0 TimesNewRomanPSMT;\f2\fnil\fcharset0 LucidaGrande;
-\f3\froman\fcharset0 Times-Roman;\f4\fmodern\fcharset0 Courier;\f5\fnil\fcharset0 GillSans;
-\f6\fmodern\fcharset0 CourierNewPSMT;\f7\fmodern\fcharset0 CourierNewPS-BoldMT;\f8\fswiss\fcharset0 Helvetica;
-\f9\fmodern\fcharset0 Courier-Bold;\f10\fnil\fcharset0 Monaco;\f11\fnil\fcharset0 AppleSymbols;
-\f12\fswiss\fcharset0 ArialNarrow;\f13\fnil\fcharset0 Georgia;\f14\fnil\fcharset0 Verdana;
-}
+{\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\fnil\fcharset0 AppleSymbols;}
 {\colortbl;\red255\green255\blue255;\red6\green69\blue173;\red127\green0\blue85;\red42\green0\blue255;
 \red0\green0\blue192;\red0\green51\blue153;\red51\green51\blue51;\red0\green0\blue255;\red0\green102\blue51;
 \red51\green153\blue51;\red0\green153\blue0;\red0\green0\blue136;\red102\green102\blue0;\red102\green0\blue102;
@@ -13,16 +8,16 @@
 \red53\green56\blue51;\red76\green107\blue135;}
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid2\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid1}}
 {\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
-\vieww10800\viewh8400\viewkind0
+\vieww28300\viewh17700\viewkind0
 \deftab720
 \pard\pardeftab720\partightenfactor0
 
-\f0\fs20 \cf0 shuffle-->unordered, unsorted \
+\f0\fs24 \cf0 shuffle-->unordered, unsorted \
 ordered--> order in which they inserted. \
 sorted or natural order--> a to z and 1 to 9. \
 \
 
-\f1\b\fs24 \ul Collections: It is a utility class, provide methods like sort, containsAll, removeAll, retainAll\
+\b \ul Collections: It is a utility class, provide methods like sort, containsAll, removeAll, retainAll\
 Note: Only List and Set are from Collection Interface. Map is derived from Map Interface. But both Collection and Map interface is said to be collection.\
 
 \b0 \ulnone Basic operations you\'92ll normally use with collections:\
@@ -33,8 +28,7 @@ Note: Only List and Set are from Collection Interface. Map is derived from Map I
 \cf0 3) Find object (or group of objects)\
 4) Retrieve an object \
 5) Iterate through the collection\
-
-\f0\fs20 \
+\
 \
 \
 \pard\pardeftab720\partightenfactor0
@@ -42,8 +36,9 @@ Note: Only List and Set are from Collection Interface. Map is derived from Map I
 \b \cf0 \ul \ulc0 List->
 \b0 \ulnone A List cares about the index.The one thing that List has that non-lists don't have is a set of methods related to the index. Those key methods include things like get(int index), indexOf(Object o), add(int index, Object obj), set(replaces element)(int index, Object obj)\
 \
+\pard\pardeftab720\partightenfactor0
 
-\b ArrayList
+\b \cf0 ArrayList
 \b0 --> dynamic array which keeps the order established by the elements' index position. If index not given add at end. Fast iteration and fast random access. Choose\
 this over a LinkedList when you need 
 \b fast iteration 
@@ -54,12 +49,11 @@ LinkedList-->
 \b0 It is not array based. It is a data structure where elements are doubly-linked to one another. There would be a start(points initial address), end(points last node) and multiple nodes.  So it has methods to insert at beginning and at end. LinkedList may iterate more slowly than an ArrayList, but it's a good choice when you need
 \b  fast insertion and deletion. 
 \b0 \
-How linkedlist works 
-\f2 \uc0\u9674 
-\f0 https://www.youtube.com/watch?v=7LuSzUim-RY\
+How linkedlist works \uc0\u9674 https://www.youtube.com/watch?v=7LuSzUim-RY\
 
 \b ====================================================\
-\ul ArrayList vs LinkedList\
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul ArrayList vs LinkedList\
 \pard\pardeftab720\partightenfactor0
 
 \b0 \cf0 \ulnone 1) Search: ArrayList search operation is pretty fast compared to the LinkedList search operation. get(int index) in ArrayList gives the performance of O(1) while LinkedList performance is O(n).\
@@ -91,49 +85,42 @@ Reason: LinkedList\'92s each element maintains two pointers (addresses) which po
 \b \
 \
 Set-->
-\f3\b0\fs21 A Set cares about uniqueness\'97it doesn't allow duplicates. The hashCode() and 
-\f4\fs18 equals() 
-\f3\fs21 method determines uniqueness of 2 object. Ex: To compare 2 DOG object we need to override equals() method and hashcode() Method.\
+\b0 A Set cares about uniqueness\'97it doesn't allow duplicates. The hashCode() and equals() method determines uniqueness of 2 object. Ex: To compare 2 DOG object we need to override equals() method and hashcode() Method.\
 \pard\pardeftab720\partightenfactor0
 
-\f5\b\fs24 \cf0 HashSet-->
-\f0\b0\fs20 shuffle\
-\pard\pardeftab720\partightenfactor0
+\b \cf0 HashSet-->
+\b0 shuffle\
 
-\b \cf0 LinkedHashSet 
+\b LinkedHashSet 
 \b0 -->ordered\
 
 \b TreeSet-->
-\f3\b0\fs21 sorted \
+\b0 sorted \
 \
 Map-->A Map cares about unique identifiers. You map a unique key (the ID) to a specific\
 value, where both the key and the value are, of course, objects\
-\pard\pardeftab720\partightenfactor0
 
-\f5\b\fs24 \cf0 HashMap -->
-\f0\b0\fs20 shuffle
-\f3\fs21 \
+\b HashMap -->
+\b0 shuffle\
 
-\f5\b\fs24 Hashtable--> 
-\f3\b0\fs21 synchronized HashMap\
+\b Hashtable--> 
+\b0 synchronized HashMap\
 
-\f5\b\fs24 LinkedHashMap-->
-\f0\b0\fs20 ordered This class extends HashMap and maintains sorting order.\
+\b LinkedHashMap-->
+\b0 ordered This class extends HashMap and maintains sorting order.\
 
-\f5\b\fs24 TreeMap-->
-\f3\b0\fs21 sorted\
+\b TreeMap-->
+\b0 sorted\
 \pard\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\pardeftab720\partightenfactor0
+\cf0 \
 
-\f6\fs20 \cf0 \
+\b How to Pass load factor value at runtime:\
 
-\f7\b How to Pass load factor value at runtime:\
-
-\f6\b0 LinkedHashSet linkedHashSet = 
-\f7\b \cf3 new
-\f6\b0 \cf0  LinkedHashSet(10,0.75F);\
+\b0 LinkedHashSet linkedHashSet = 
+\b \cf3 new
+\b0 \cf0  LinkedHashSet(10,0.75F);\
 \pard\pardeftab720\partightenfactor0
-
-\f3\fs21 \cf0 \
+\cf0 \
 \pard\pardeftab720\partightenfactor0
 
 \b \cf0 Clone method in HashSet, ArrayList etc\'85\
@@ -142,7 +129,7 @@ value, where both the key and the value are, of course, objects\
 \b0 \cf0 Some of the Collections objects implements cloneable and does not overrides clone method. So the default shallow copy is returned.\
 \pard\pardeftab720\partightenfactor0
 
-\f0\b\fs20 \cf0 \
+\b \cf0 \
 \
 2 reasons to override hashcode and equals\
 	1) To use hash related API on Collections to store userdefined objects.\
@@ -155,9 +142,7 @@ value, where both the key and the value are, of course, objects\
 	2) if equals is not overridden.Objects equals is called. There objects are compared based on reference.\
  \
 \
-\pard\pardeftab720\partightenfactor0
-
-\f8 \cf0 String s1 = \cf4 "FB"\cf0 ;\
+String s1 = \cf4 "FB"\cf0 ;\
 String s2 = \cf4 "Ea"\cf0 ;\
 \pard\pardeftab720\partightenfactor0
 
@@ -175,9 +160,7 @@ String s2 = \cf4 "Ea"\cf0 ;\
 \}\
 \
 Output: s1 and s2 are same.\
-\pard\pardeftab720\partightenfactor0
-
-\f0 \cf0 \
+\
 \
 Whenever an element is added on hash related Class.\
 1) JVM generate hashCode for the object\
@@ -189,47 +172,47 @@ Whenever an element is added on hash related Class.\
 \
 \pard\pardeftab720\partightenfactor0
 
-\f5\i\b\fs21 \cf0 A 
-\f4\i0\b0\fs18 hashCode() 
-\f5\i\b\fs21 that returns the same value for all instances whether\
+\i\b \cf0 A 
+\i0\b0 hashCode() 
+\i\b that returns the same value for all instances whether\
 they\'92re equal or not is still a legal\'97even appropriate\'97
-\f4\i0\b0\fs18 hashCode() 
-\f5\i\b\fs21 method! For example,\
+\i0\b0 hashCode() 
+\i\b method! For example,\
 \pard\pardeftab720\partightenfactor0
 
-\f4\i0\b0\fs18 \cf0 public int hashCode() \{ return 1492; \}\
+\i0\b0 \cf0 public int hashCode() \{ return 1492; \}\
 \pard\pardeftab720\partightenfactor0
 
-\f5\i\b\fs21 \cf0 would not violate the contract. Two objects with an 
-\f4\i0\b0\fs18 x 
-\f5\i\b\fs21 value of 
-\f4\i0\b0\fs18 8 
-\f5\i\b\fs21 will\
+\i\b \cf0 would not violate the contract. Two objects with an 
+\i0\b0 x 
+\i\b value of 
+\i0\b0 8 
+\i\b will\
 have the same hashcode. But then again, so will two unequal objects, one with an 
-\f4\i0\b0\fs18 x\
+\i0\b0 x\
 
-\f5\i\b\fs21 value of 
-\f4\i0\b0\fs18 12 
-\f5\i\b\fs21 and the other a value of 
-\f4\i0\b0\fs18 -920
-\f5\i\b\fs21 . This 
-\f4\i0\b0\fs18 hashCode() 
-\f5\i\b\fs21 method is horribly inefficient,\
+\i\b value of 
+\i0\b0 12 
+\i\b and the other a value of 
+\i0\b0 -920
+\i\b . This 
+\i0\b0 hashCode() 
+\i\b method is horribly inefficient,\
 remember, because it makes all objects land in the same bucket, but even so, the object\
 can still be found as the collection cranks through the one and only bucket using\
 \pard\pardeftab720\partightenfactor0
 
-\f4\i0\b0\fs18 \cf0 equals()
-\f5\i\b\fs21 \'97trying desperately to finally, painstakingly, locate the correct object. In other\
+\i0\b0 \cf0 equals()
+\i\b \'97trying desperately to finally, painstakingly, locate the correct object. In other\
 words, the hashcode was really no help at all in speeding up the search, even though\
 improving search speed is hashcode\'92s intended purpose! Nonetheless, this one7y-hash-fitsall\
 method would be considered appropriate and even correct because it doesn\'92t violate\
 the contract. Once more, correct does not necessarily mean good.
-\f0\i0\b0\fs20 \
+\i0\b0 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\b \cf0 \ul \ulc0 To Check for the insertion: \
+\b \cf0 \ul To Check for the insertion: \
 \pard\pardeftab720\partightenfactor0
 
 \b0 \cf0 \ulnone List<String> list = new ArrayList<String>();\
@@ -238,25 +221,18 @@ list.add(0,\'94person\'94); // This will move the previously added person to ind
 \
 \pard\pardeftab720\partightenfactor0
 
-\b \cf0 \ul \ulc0 To Check for the hashValue for an object\
+\b \cf0 \ul To Check for the hashValue for an object\
 \pard\pardeftab720\partightenfactor0
 
 \b0 \cf0 \ulnone object.hashCode();\
 \
 ================================================================================================= ======================\
 \
-\pard\pardeftab720\partightenfactor0
-
-\f8 \cf0 1)  
-\f3\fs21 Implement Comparable using 
-\f4\fs18 compareTo()
-\f3\fs21 ; provides only one sort order.\
+1)  Implement Comparable using compareTo(); provides only one sort order.\
 Ex: Employee implements Comparable\
 Collection.Sort(employeeList);\
 \pard\pardeftab720\li420\fi-360\partightenfactor0
-\cf0 Create many Comparators to sort a class many ways; implement 
-\f4\fs18 compare()
-\f3\fs21 .\
+\cf0 Create many Comparators to sort a class many ways; implement compare().\
 \pard\pardeftab720\partightenfactor0
 \cf0 Ex: EmpIdComparator implements Comparator\
 Collection.Sort(employeeList, new EmpIdComparator())\
@@ -265,63 +241,52 @@ Collection.Sort(employeeList, new EmpNameComparator())\
 \
 \pard\pardeftab720\partightenfactor0
 
-\b \cf0 \ul \ulc0 If we try to sort an userdefined objects which is placed in Arrays or LinkedList\'85it will throw below error\
+\b \cf0 \ul If we try to sort an userdefined objects which is placed in Arrays or LinkedList\'85it will throw below error\
 \pard\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\pardeftab720\sa300\partightenfactor0
 
-\f6\b0\fs20 \cf6 \ulnone Exception\cf7  in thread \cf8 "main"\cf7  java.\cf9 lang\cf7 .\cf6 ClassCastException\cf10 :\cf7  \
+\b0 \cf6 \ulnone Exception\cf7  in thread \cf8 "main"\cf7  java.\cf9 lang\cf7 .\cf6 ClassCastException\cf10 :\cf7  \
 com.\cf9 mkyong\cf7 .\cf9 common\cf7 .\cf9 Fruit\cf7  cannot be cast to java.\cf9 lang\cf7 .\cf6 Comparable\cf7 \
 	at java.\cf9 util\cf7 .\cf6 Arrays\cf7 .\cf9 mergeSort\cf11 (\cf7 Unknown Source\cf11 )\cf7 \
 	at java.\cf9 util\cf7 .\cf6 Arrays\cf7 .\cf9 sort\cf11 (\cf7 Unknown Source\cf11 )\cf7 \
 \pard\pardeftab720\partightenfactor0
-
-\f3\fs21 \cf0 \
+\cf0 \
 \pard\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\pardeftab720\partightenfactor0
-
-\f6\fs18 \cf12 public\cf0  \cf12 int\cf0  compareTo\cf13 (\cf14 Object\cf0  ob\cf13 )\{\cf0 \uc0\u8232 \'a0 \'a0 \'a0 \'a0 \cf12 if\cf13 (!(\cf0 ob \cf12 instanceof\cf0  \cf14 Person\cf13 ))\{\cf0 \uc0\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \cf12 throw\cf0  \cf12 new\cf0  \cf14 ClassCastException\cf13 (\cf15 "Invalid object"\cf13 );\cf0 \uc0\u8232 \'a0 \'a0 \'a0 \'a0 \cf13 \}\cf0 \uc0\u8232 \u8232 \'a0 \'a0 \'a0 \'a0 \cf12 int\cf0  age \cf13 =\cf0  \cf13 ((\cf14 Person\cf13 )\cf0  ob\cf13 ).\cf0 getAge\cf13 ();\cf0 \uc0\u8232 \u8232 \'a0 \'a0 \'a0 \'a0 \cf12 return this\cf13 .\cf0 getAge\cf13  \'96 age;\cf0 \uc0\u8232 \'a0 \'a0 \cf13 \}\cf0 \
+\cf12 public\cf0  \cf12 int\cf0  compareTo\cf13 (\cf14 Object\cf0  ob\cf13 )\{\cf0 \uc0\u8232 \'a0 \'a0 \'a0 \'a0 \cf12 if\cf13 (!(\cf0 ob \cf12 instanceof\cf0  \cf14 Person\cf13 ))\{\cf0 \uc0\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \cf12 throw\cf0  \cf12 new\cf0  \cf14 ClassCastException\cf13 (\cf15 "Invalid object"\cf13 );\cf0 \uc0\u8232 \'a0 \'a0 \'a0 \'a0 \cf13 \}\cf0 \uc0\u8232 \u8232 \'a0 \'a0 \'a0 \'a0 \cf12 int\cf0  age \cf13 =\cf0  \cf13 ((\cf14 Person\cf13 )\cf0  ob\cf13 ).\cf0 getAge\cf13 ();\cf0 \uc0\u8232 \u8232 \'a0 \'a0 \'a0 \'a0 \cf12 return this\cf13 .\cf0 getAge\cf13  \'96 age;\cf0 \uc0\u8232 \'a0 \'a0 \cf13 \}\cf0 \
 \pard\pardeftab720\partightenfactor0
-
-\f3\fs21 \cf0 \
+\cf0 \
 \pard\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\pardeftab720\partightenfactor0
-
-\f6\fs18 \cf12 public\cf0  \cf12 int\cf0  compareTo\cf13 (\cf14 Employee\cf0  e\cf13 )\cf0  \cf13 \{\cf0 \uc0\u8232 \u8232 \'a0 \'a0 \'a0 \'a0 \cf12 return\cf0  \'a0eName\cf13 .\cf0 compareTo\cf13 (\cf0 e\cf13 .\cf0 eName\cf13 );\
+\cf12 public\cf0  \cf12 int\cf0  compareTo\cf13 (\cf14 Employee\cf0  e\cf13 )\cf0  \cf13 \{\cf0 \uc0\u8232 \u8232 \'a0 \'a0 \'a0 \'a0 \cf12 return\cf0  \'a0eName\cf13 .\cf0 compareTo\cf13 (\cf0 e\cf13 .\cf0 eName\cf13 );\
 \pard\pardeftab720\sb100\sa100\partightenfactor0
 
-\f7\b \cf13 	//
-\f1\fs27 \cf0  compareToIgnoreCase for sorting with String ignoreCase\
+\b \cf13 	//\cf0  compareToIgnoreCase for sorting with String ignoreCase\
 \pard\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\pardeftab720\partightenfactor0
 
-\f6\b0\fs18 \cf0 \uc0\u8232 \'a0 \'a0 \cf13 \}\cf0 \
+\b0 \cf0 \uc0\u8232 \'a0 \'a0 \cf13 \}\cf0 \
 \pard\pardeftab720\partightenfactor0
-
-\f3\fs21 \cf0 Comparing thisObject with runtimeObject returns ascending order\
+\cf0 Comparing thisObject with runtimeObject returns ascending order\
 Comparing runtimeObject with thisObjectreturns ascending order\
 \
 =====================================================================\
+\
 \pard\pardeftab720\partightenfactor0
 
-\f0\fs24 \cf0 \
-
-\b\fs26 What is difference between Collections.sort() and Arrays.sort() ? Which one is better in terms of time efficiency ? SOLUTION 
+\b \cf0 What is difference between Collections.sort() and Arrays.sort() ? Which one is better in terms of time efficiency ? SOLUTION 
 \b0 \
+Collections.sort() internally calls Arrays.sort() and thus the underlying algorithm for both of these methods is same. The only difference is the type of input these methods accept.\
+Iterative Merge Sort algorithm is used by Arrays.sort() method as of JDK 6.\
 \pard\pardeftab720\partightenfactor0
 
-\f1\fs22 \cf0 Collections.sort() internally calls Arrays.sort() and thus the underlying algorithm for both of these methods is same. The only difference is the type of input these methods accept.\
-Iterative Merge Sort algorithm is used by Arrays.sort() method as of JDK 6.\
-
-\b \ul Below is the chart of Arrays.sort\'85 it provides passing all primitive types like \'85.byte[],char[],int[]\
+\b \cf0 \ul Below is the chart of Arrays.sort\'85 it provides passing all primitive types like \'85.byte[],char[],int[]\
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw15\brdrcf16 \trbrdrl\brdrs\brdrw15\brdrcf16 \trbrdrr\brdrs\brdrw15\brdrcf16 
 \clvertalc \clcbpat1 \clbrdrt\brdrs\brdrw15\brdrcf16 \clbrdrl\brdrs\brdrw15\brdrcf16 \clbrdrb\brdrs\brdrw15\brdrcf16 \clbrdrr\brdrs\brdrw15\brdrcf16 \clpadl100 \clpadr100 \gaph\cellx4320
 \clvertalc \clcbpat1 \clbrdrt\brdrs\brdrw15\brdrcf16 \clbrdrl\brdrs\brdrw15\brdrcf16 \clbrdrb\brdrs\brdrw15\brdrcf16 \clbrdrr\brdrs\brdrw15\brdrcf16 \clpadl100 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab720\qr\partightenfactor0
 
-\f6\b0\fs20 \cf0 \ulnone static\'a0void
-\f1\fs27 \cell 
+\b0 \cf0 \ulnone static\'a0void\cell 
 \pard\intbl\itap1\pardeftab720\partightenfactor0
 {\field{\*\fldinst{HYPERLINK "file:///C:%5C%5CUsers%5C%5Cg580-466%5C%5CDocuments%5C%5CStudy%5C%5CStudy%5C%5CJava%20Materials%5C%5CAPIs%5C%5Cjdk-1_5_0-doc%5C%5Cdocs%5C%5Capi%5C%5Cjava%5C%5Cutil%5C%5CArrays.html"}}{\fldrslt 
-\f7\b\fs20 \cf8 \ul \ulc8 sort}}
-\f6\fs20 ({\field{\*\fldinst{HYPERLINK "file:///C:%5C%5CUsers%5C%5Cg580-466%5C%5CDocuments%5C%5CStudy%5C%5CStudy%5C%5CJava%20Materials%5C%5CAPIs%5C%5Cjdk-1_5_0-doc%5C%5Cdocs%5C%5Capi%5C%5Cjava%5C%5Clang%5C%5CObject.html"}}{\fldrslt \cf8 \ul \ulc8 Object}}[]\'a0a)
-\f1\fs27 \'a0\uc0\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Sorts the specified array of objects into ascending order, according to the\'a0
+\b \cf8 \ul \ulc8 sort}}({\field{\*\fldinst{HYPERLINK "file:///C:%5C%5CUsers%5C%5Cg580-466%5C%5CDocuments%5C%5CStudy%5C%5CStudy%5C%5CJava%20Materials%5C%5CAPIs%5C%5Cjdk-1_5_0-doc%5C%5Cdocs%5C%5Capi%5C%5Cjava%5C%5Clang%5C%5CObject.html"}}{\fldrslt \cf8 \ul \ulc8 Object}}[]\'a0a)\'a0\uc0\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Sorts the specified array of objects into ascending order, according to the\'a0
 \i natural ordering
 \i0 \'a0of its elements.\cell \row
 
@@ -329,14 +294,9 @@ Iterative Merge Sort algorithm is used by Arrays.sort() method as of JDK 6.\
 \clvertalc \clcbpat1 \clbrdrt\brdrs\brdrw15\brdrcf16 \clbrdrl\brdrs\brdrw15\brdrcf16 \clbrdrb\brdrs\brdrw15\brdrcf16 \clbrdrr\brdrs\brdrw15\brdrcf16 \clpadl100 \clpadr100 \gaph\cellx4320
 \clvertalc \clcbpat1 \clbrdrt\brdrs\brdrw15\brdrcf16 \clbrdrl\brdrs\brdrw15\brdrcf16 \clbrdrb\brdrs\brdrw15\brdrcf16 \clbrdrr\brdrs\brdrw15\brdrcf16 \clpadl100 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab720\qr\partightenfactor0
-
-\f6\fs20 \cf0 static\'a0void
-\f1\fs27 \cell 
+\cf0 static\'a0void\cell 
 \pard\intbl\itap1\pardeftab720\partightenfactor0
-{\field{\*\fldinst{HYPERLINK "file:///C:%5C%5CUsers%5C%5Cg580-466%5C%5CDocuments%5C%5CStudy%5C%5CStudy%5C%5CJava%20Materials%5C%5CAPIs%5C%5Cjdk-1_5_0-doc%5C%5Cdocs%5C%5Capi%5C%5Cjava%5C%5Cutil%5C%5CArrays.html"}}{\fldrslt 
-\f6\fs20 \cf8 \ul \ulc8 sort}}
-\f6\fs20 \ul ({\field{\*\fldinst{HYPERLINK "file:///C:%5C%5CUsers%5C%5Cg580-466%5C%5CDocuments%5C%5CStudy%5C%5CStudy%5C%5CJava%20Materials%5C%5CAPIs%5C%5Cjdk-1_5_0-doc%5C%5Cdocs%5C%5Capi%5C%5Cjava%5C%5Clang%5C%5CObject.html"}}{\fldrslt \cf8 \ulc8 Object}}[]\'a0a, int\'a0fromIndex, int\'a0toIndex)
-\f1\fs27 \'a0\uc0\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Sorts the specified range of the specified array of objects into ascending order, according to the\'a0
+{\field{\*\fldinst{HYPERLINK "file:///C:%5C%5CUsers%5C%5Cg580-466%5C%5CDocuments%5C%5CStudy%5C%5CStudy%5C%5CJava%20Materials%5C%5CAPIs%5C%5Cjdk-1_5_0-doc%5C%5Cdocs%5C%5Capi%5C%5Cjava%5C%5Cutil%5C%5CArrays.html"}}{\fldrslt \cf8 \ul \ulc8 sort}}\ul ({\field{\*\fldinst{HYPERLINK "file:///C:%5C%5CUsers%5C%5Cg580-466%5C%5CDocuments%5C%5CStudy%5C%5CStudy%5C%5CJava%20Materials%5C%5CAPIs%5C%5Cjdk-1_5_0-doc%5C%5Cdocs%5C%5Capi%5C%5Cjava%5C%5Clang%5C%5CObject.html"}}{\fldrslt \cf8 \ulc8 Object}}[]\'a0a, int\'a0fromIndex, int\'a0toIndex)\'a0\uc0\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Sorts the specified range of the specified array of objects into ascending order, according to the\'a0
 \i natural ordering
 \i0 \'a0of its elements.\cell \row
 
@@ -344,148 +304,118 @@ Iterative Merge Sort algorithm is used by Arrays.sort() method as of JDK 6.\
 \clvertalc \clcbpat1 \clbrdrt\brdrs\brdrw15\brdrcf16 \clbrdrl\brdrs\brdrw15\brdrcf16 \clbrdrb\brdrs\brdrw15\brdrcf16 \clbrdrr\brdrs\brdrw15\brdrcf16 \clpadl100 \clpadr100 \gaph\cellx4320
 \clvertalc \clcbpat1 \clbrdrt\brdrs\brdrw15\brdrcf16 \clbrdrl\brdrs\brdrw15\brdrcf16 \clbrdrb\brdrs\brdrw15\brdrcf16 \clbrdrr\brdrs\brdrw15\brdrcf16 \clpadl100 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab720\qr\partightenfactor0
-
-\f6\fs20 \cf0 \ulnone static\'a0void
-\f1\fs27 \cell 
+\cf0 \ulnone static\'a0void\cell 
 \pard\intbl\itap1\pardeftab720\partightenfactor0
 {\field{\*\fldinst{HYPERLINK "file:///C:%5C%5CUsers%5C%5Cg580-466%5C%5CDocuments%5C%5CStudy%5C%5CStudy%5C%5CJava%20Materials%5C%5CAPIs%5C%5Cjdk-1_5_0-doc%5C%5Cdocs%5C%5Capi%5C%5Cjava%5C%5Cutil%5C%5CArrays.html"}}{\fldrslt 
-\f7\b\fs20 \cf8 \ul \ulc8 sort}}
-\f6\fs20 (short[]\'a0a)
-\f1\fs27 \'a0\uc0\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Sorts the specified array of shorts into ascending numerical order.\cell \row
+\b \cf8 \ul \ulc8 sort}}(short[]\'a0a)\'a0\uc0\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Sorts the specified array of shorts into ascending numerical order.\cell \row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw15\brdrcf16 \trbrdrr\brdrs\brdrw15\brdrcf16 
 \clvertalc \clcbpat1 \clbrdrt\brdrs\brdrw15\brdrcf16 \clbrdrl\brdrs\brdrw15\brdrcf16 \clbrdrb\brdrs\brdrw15\brdrcf16 \clbrdrr\brdrs\brdrw15\brdrcf16 \clpadl100 \clpadr100 \gaph\cellx4320
 \clvertalc \clcbpat1 \clbrdrt\brdrs\brdrw15\brdrcf16 \clbrdrl\brdrs\brdrw15\brdrcf16 \clbrdrb\brdrs\brdrw15\brdrcf16 \clbrdrr\brdrs\brdrw15\brdrcf16 \clpadl100 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab720\qr\partightenfactor0
-
-\f6\fs20 \cf0 static\'a0void
-\f1\fs27 \cell 
+\cf0 static\'a0void\cell 
 \pard\intbl\itap1\pardeftab720\partightenfactor0
 {\field{\*\fldinst{HYPERLINK "file:///C:%5C%5CUsers%5C%5Cg580-466%5C%5CDocuments%5C%5CStudy%5C%5CStudy%5C%5CJava%20Materials%5C%5CAPIs%5C%5Cjdk-1_5_0-doc%5C%5Cdocs%5C%5Capi%5C%5Cjava%5C%5Cutil%5C%5CArrays.html"}}{\fldrslt 
-\f7\b\fs20 \cf8 \ul \ulc8 sort}}
-\f6\fs20 (short[]\'a0a, int\'a0fromIndex, int\'a0toIndex)
-\f1\fs27 \'a0\uc0\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Sorts the specified range of the specified array of shorts into ascending numerical order.\cell \row
+\b \cf8 \ul \ulc8 sort}}(short[]\'a0a, int\'a0fromIndex, int\'a0toIndex)\'a0\uc0\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Sorts the specified range of the specified array of shorts into ascending numerical order.\cell \row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw15\brdrcf16 \trbrdrb\brdrs\brdrw15\brdrcf16 \trbrdrr\brdrs\brdrw15\brdrcf16 
-\clvertalc \clcbpat1 \clbrdrt\brdrs\brdrw15\brdrcf16 \clbrdrl\brdrs\brdrw15\brdrcf16 \clbrdrb\brdrs\brdrw15\brdrcf16 \clbrdrr\brdrs\brdrw15\brdrcf16 \clpadl100 \clpadr100 \gaph\cellx4320
+\clmgf \clvertalc \clcbpat1 \clbrdrt\brdrs\brdrw15\brdrcf16 \clbrdrl\brdrs\brdrw15\brdrcf16 \clbrdrb\brdrs\brdrw15\brdrcf16 \clbrdrr\brdrs\brdrw15\brdrcf16 \clpadl100 \clpadr100 \gaph\cellx4320
 \clmrg \clvertalc \clcbpat1 \clbrdrt\brdrs\brdrw15\brdrcf16 \clbrdrl\brdrs\brdrw15\brdrcf16 \clbrdrb\brdrs\brdrw15\brdrcf16 \clbrdrr\brdrs\brdrw15\brdrcf16 \clpadl100 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab720\qr\partightenfactor0
-
-\f6\fs20 \cf0 static\
+\cf0 static\
 
 \itap2\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
 \clvertalc \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadl100 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap2\pardeftab720\qr\partightenfactor0
-\cf0 <T> void
-\f1\fs24 \nestcell \lastrow\nestrow\cell 
+\cf0 <T> void\nestcell \lastrow\nestrow\cell 
 \pard\intbl\itap1\cell \lastrow\row
 \pard\pardeftab720\qr\partightenfactor0
 \cf0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw15\brdrcf16 \trbrdrl\brdrs\brdrw15\brdrcf16 \trbrdrb\brdrs\brdrw15\brdrcf16 \trbrdrr\brdrs\brdrw15\brdrcf16 
-\clvertalc \clcbpat1 \clbrdrt\brdrs\brdrw15\brdrcf16 \clbrdrl\brdrs\brdrw15\brdrcf16 \clbrdrb\brdrs\brdrw15\brdrcf16 \clbrdrr\brdrs\brdrw15\brdrcf16 \clpadl100 \clpadr100 \gaph\cellx4320
+\clmgf \clvertalc \clcbpat1 \clbrdrt\brdrs\brdrw15\brdrcf16 \clbrdrl\brdrs\brdrw15\brdrcf16 \clbrdrb\brdrs\brdrw15\brdrcf16 \clbrdrr\brdrs\brdrw15\brdrcf16 \clpadl100 \clpadr100 \gaph\cellx4320
 \clmrg \clvertalc \clcbpat1 \clbrdrt\brdrs\brdrw15\brdrcf16 \clbrdrl\brdrs\brdrw15\brdrcf16 \clbrdrb\brdrs\brdrw15\brdrcf16 \clbrdrr\brdrs\brdrw15\brdrcf16 \clpadl100 \clpadr100 \gaph\cellx8640
 
 \itap2\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw15\brdrcf16 \trbrdrl\brdrs\brdrw15\brdrcf16 \trbrdrr\brdrs\brdrw15\brdrcf16 
 \clvertalc \clcbpat1 \clbrdrt\brdrs\brdrw15\brdrcf16 \clbrdrl\brdrs\brdrw15\brdrcf16 \clbrdrb\brdrs\brdrw15\brdrcf16 \clbrdrr\brdrs\brdrw15\brdrcf16 \clpadl100 \clpadr100 \gaph\cellx4320
 \clvertalc \clcbpat1 \clbrdrt\brdrs\brdrw15\brdrcf16 \clbrdrl\brdrs\brdrw15\brdrcf16 \clbrdrb\brdrs\brdrw15\brdrcf16 \clbrdrr\brdrs\brdrw15\brdrcf16 \clpadl100 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap2\pardeftab720\qr\partightenfactor0
-
-\f6\fs20 \cf0 \nestcell 
+\cf0 \nestcell 
 \pard\intbl\itap2\pardeftab720\partightenfactor0
 {\field{\*\fldinst{HYPERLINK "file:///C:%5C%5CUsers%5C%5Cg580-466%5C%5CDocuments%5C%5CStudy%5C%5CStudy%5C%5CJava%20Materials%5C%5CAPIs%5C%5Cjdk-1_5_0-doc%5C%5Cdocs%5C%5Capi%5C%5Cjava%5C%5Cutil%5C%5CArrays.html"}}{\fldrslt 
-\f7\b \cf8 \ul \ulc8 sort}}(T[]\'a0a,\'a0{\field{\*\fldinst{HYPERLINK "file:///C:%5C%5CUsers%5C%5Cg580-466%5C%5CDocuments%5C%5CStudy%5C%5CStudy%5C%5CJava%20Materials%5C%5CAPIs%5C%5Cjdk-1_5_0-doc%5C%5Cdocs%5C%5Capi%5C%5Cjava%5C%5Cutil%5C%5CComparator.html"}}{\fldrslt \cf8 \ul \ulc8 Comparator}}<? super T>\'a0c)
-\f1\fs27 \'a0\uc0\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Sorts the specified array of objects according to the order induced by the specified comparator.\nestcell \nestrow
+\b \cf8 \ul \ulc8 sort}}(T[]\'a0a,\'a0{\field{\*\fldinst{HYPERLINK "file:///C:%5C%5CUsers%5C%5Cg580-466%5C%5CDocuments%5C%5CStudy%5C%5CStudy%5C%5CJava%20Materials%5C%5CAPIs%5C%5Cjdk-1_5_0-doc%5C%5Cdocs%5C%5Capi%5C%5Cjava%5C%5Cutil%5C%5CComparator.html"}}{\fldrslt \cf8 \ul \ulc8 Comparator}}<? super T>\'a0c)\'a0\uc0\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Sorts the specified array of objects according to the order induced by the specified comparator.\nestcell \nestrow
 
 \itap2\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw15\brdrcf16 \trbrdrb\brdrs\brdrw15\brdrcf16 \trbrdrr\brdrs\brdrw15\brdrcf16 
-\clvertalc \clcbpat1 \clbrdrt\brdrs\brdrw15\brdrcf16 \clbrdrl\brdrs\brdrw15\brdrcf16 \clbrdrb\brdrs\brdrw15\brdrcf16 \clbrdrr\brdrs\brdrw15\brdrcf16 \clpadl100 \clpadr100 \gaph\cellx4320
+\clmgf \clvertalc \clcbpat1 \clbrdrt\brdrs\brdrw15\brdrcf16 \clbrdrl\brdrs\brdrw15\brdrcf16 \clbrdrb\brdrs\brdrw15\brdrcf16 \clbrdrr\brdrs\brdrw15\brdrcf16 \clpadl100 \clpadr100 \gaph\cellx4320
 \clmrg \clvertalc \clcbpat1 \clbrdrt\brdrs\brdrw15\brdrcf16 \clbrdrl\brdrs\brdrw15\brdrcf16 \clbrdrb\brdrs\brdrw15\brdrcf16 \clbrdrr\brdrs\brdrw15\brdrcf16 \clpadl100 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap2\pardeftab720\qr\partightenfactor0
-
-\f6\fs20 \cf0 static\
-<T> void
-\f1\fs24 \nestcell 
+\cf0 static\
+<T> void\nestcell 
 \pard\intbl\itap2\nestcell \lastrow\nestrow\cell 
 \pard\intbl\itap1\cell \lastrow\row
 \pard\pardeftab720\qr\partightenfactor0
 \cf0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw15\brdrcf16 \trbrdrl\brdrs\brdrw15\brdrcf16 \trbrdrb\brdrs\brdrw15\brdrcf16 \trbrdrr\brdrs\brdrw15\brdrcf16 
-\clvertalc \clcbpat1 \clbrdrt\brdrs\brdrw15\brdrcf16 \clbrdrl\brdrs\brdrw15\brdrcf16 \clbrdrb\brdrs\brdrw15\brdrcf16 \clbrdrr\brdrs\brdrw15\brdrcf16 \clpadl100 \clpadr100 \gaph\cellx4320
+\clmgf \clvertalc \clcbpat1 \clbrdrt\brdrs\brdrw15\brdrcf16 \clbrdrl\brdrs\brdrw15\brdrcf16 \clbrdrb\brdrs\brdrw15\brdrcf16 \clbrdrr\brdrs\brdrw15\brdrcf16 \clpadl100 \clpadr100 \gaph\cellx4320
 \clmrg \clvertalc \clcbpat1 \clbrdrt\brdrs\brdrw15\brdrcf16 \clbrdrl\brdrs\brdrw15\brdrcf16 \clbrdrb\brdrs\brdrw15\brdrcf16 \clbrdrr\brdrs\brdrw15\brdrcf16 \clpadl100 \clpadr100 \gaph\cellx8640
 
 \itap2\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw15\brdrcf16 \trbrdrl\brdrs\brdrw15\brdrcf16 \trbrdrb\brdrs\brdrw15\brdrcf16 \trbrdrr\brdrs\brdrw15\brdrcf16 
 \clvertalc \clcbpat1 \clbrdrt\brdrs\brdrw15\brdrcf16 \clbrdrl\brdrs\brdrw15\brdrcf16 \clbrdrb\brdrs\brdrw15\brdrcf16 \clbrdrr\brdrs\brdrw15\brdrcf16 \clpadl100 \clpadr100 \gaph\cellx4320
 \clvertalc \clcbpat1 \clbrdrt\brdrs\brdrw15\brdrcf16 \clbrdrl\brdrs\brdrw15\brdrcf16 \clbrdrb\brdrs\brdrw15\brdrcf16 \clbrdrr\brdrs\brdrw15\brdrcf16 \clpadl100 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap2\pardeftab720\qr\partightenfactor0
-
-\f6\fs20 \cf0 \nestcell 
+\cf0 \nestcell 
 \pard\intbl\itap2\pardeftab720\partightenfactor0
 {\field{\*\fldinst{HYPERLINK "file:///C:%5C%5CUsers%5C%5Cg580-466%5C%5CDocuments%5C%5CStudy%5C%5CStudy%5C%5CJava%20Materials%5C%5CAPIs%5C%5Cjdk-1_5_0-doc%5C%5Cdocs%5C%5Capi%5C%5Cjava%5C%5Cutil%5C%5CArrays.html"}}{\fldrslt 
-\f7\b \cf8 \ul \ulc8 sort}}(T[]\'a0a, int\'a0fromIndex, int\'a0toIndex,\'a0{\field{\*\fldinst{HYPERLINK "file:///C:%5C%5CUsers%5C%5Cg580-466%5C%5CDocuments%5C%5CStudy%5C%5CStudy%5C%5CJava%20Materials%5C%5CAPIs%5C%5Cjdk-1_5_0-doc%5C%5Cdocs%5C%5Capi%5C%5Cjava%5C%5Cutil%5C%5CComparator.html"}}{\fldrslt \cf8 \ul \ulc8 Comparator}}<? super T>\'a0c)
-\f1\fs27 \'a0\uc0\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Sorts the specified range of the specified array of objects according to the order induced by the specified comparator.\nestcell \lastrow\nestrow\cell 
+\b \cf8 \ul \ulc8 sort}}(T[]\'a0a, int\'a0fromIndex, int\'a0toIndex,\'a0{\field{\*\fldinst{HYPERLINK "file:///C:%5C%5CUsers%5C%5Cg580-466%5C%5CDocuments%5C%5CStudy%5C%5CStudy%5C%5CJava%20Materials%5C%5CAPIs%5C%5Cjdk-1_5_0-doc%5C%5Cdocs%5C%5Capi%5C%5Cjava%5C%5Cutil%5C%5CComparator.html"}}{\fldrslt \cf8 \ul \ulc8 Comparator}}<? super T>\'a0c)\'a0\uc0\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Sorts the specified range of the specified array of objects according to the order induced by the specified comparator.\nestcell \lastrow\nestrow\cell 
 \pard\intbl\itap1\cell \lastrow\row
 \pard\pardeftab720\partightenfactor0
-
-\fs22 \cf0 \
-=================================
-\f3\fs21 \ul \
+\cf0 \
+=================================\ul \
 Search in Collections and Arrays\
-\pard\pardeftab720\partightenfactor0
-\cf0 \ulnone Both the Collections class and Arrays class provide a single binarySearch method\
+\ulnone Both the Collections class and Arrays class provide a single binarySearch method\
 to search for a specific element. When searching through collections or arrays, the\
 following rules apply:\
 \pard\pardeftab720\partightenfactor0
-
-\f8\fs20 \cf17 1) 
-\f3\fs21 \cf0 Searches are performed using the 
-\f4\fs18 binarySearch() 
-\f3\fs21 method.\
-
-\f8\fs20 \cf17 2) 
-\f3\fs21 \cf0 Successful searches 
-\b \ul return the 
-\f9\fs18 int 
-\f3\fs21 index
+\cf17 1) \cf0 Searches are performed using the binarySearch() method.\
+\cf17 2) \cf0 Successful searches 
+\b \ul return the int index
 \b0 \ulnone  of the element being searched.\
 3)The collection/array being searched 
 \b \ul must be sorted
 \b0 \ulnone  before you can search it.\
-
-\f8\fs20 \cf17 4) 
-\f3\fs21 \cf0 If you attempt to search an array or collection that has not already been\
+\cf17 4) \cf0 If you attempt to search an array or collection that has not already been\
 sorted, the results of the search is  not be predictable.\
 \
 \pard\pardeftab720\partightenfactor0
 
-\f5\b\fs24 \cf0 Converting Arrays to Lists \
-
-\f4\b0\fs18 String[] sa = \{"one", "two", "three", "four"\};\
-List sList = Arrays.asList(sa);\
-
-\f5\b\fs24 Converting Lists to Arrays\
+\b \cf0 Converting Arrays to Lists \
 \pard\pardeftab720\partightenfactor0
 
-\f10\b0\fs22 \cf0 		List<Integer> \cf18 l\cf0  = \cf3 new\cf0  ArrayList<>();\
+\b0 \cf0 String[] sa = \{"one", "two", "three", "four"\};\
+List sList = Arrays.asList(sa);\
+\pard\pardeftab720\partightenfactor0
+
+\b \cf0 Converting Lists to Arrays\
+\pard\pardeftab720\partightenfactor0
+
+\b0 \cf0 		List<Integer> \cf18 l\cf0  = \cf3 new\cf0  ArrayList<>();\
 		\cf18 l\cf0 .add(10);\
 		\cf18 l\cf0 .add(20);\
 		Integer \cf18 a\cf0 [] = \cf3 new\cf0  Integer[10];\
         \cf18 l\cf0 .toArray(\cf18 a\cf0 );\
         Arrays.stream(\cf18 a\cf0 ).forEach(System.\cf5 out\cf0 ::println);\
-\pard\pardeftab720\partightenfactor0
-
-\f4\fs18 \cf0 \
+\
 \
 \pard\pardeftab720\partightenfactor0
 
-\f9\b\fs28 \cf0 What is ConcurrentModificationException:\
+\b \cf0 What is ConcurrentModificationException:\
 \pard\pardeftab720\li1080\fi-360\partightenfactor0
 
-\f4\b0\fs20 \cf0 While iterating(through object for loop or iterator and not through enumerator) the list, when we add or delete list(not iterator) Concurrent ModificationException will be thrown.\
+\b0 \cf0 While iterating(through object for loop or iterator and not through enumerator) the list, when we add or delete list(not iterator) Concurrent ModificationException will be thrown.\
 If we iterate through Iterator and delete iterator value, no exception will be thrown. Underlying list will be deleted after iteration is over.\
 \pard\pardeftab720\partightenfactor0
-
-\f8 \cf0 		List<String> list = 
+\cf0 		List<String> list = 
 \b \cf3 new
 \b0 \cf0  ArrayList<String>();\
 		list.add(\cf4 "Prabhu"\cf0 );\
@@ -501,11 +431,9 @@ If we iterate through Iterator and delete iterator value, no exception will be t
 	Output: 0\
 	\
 \pard\pardeftab720\li1080\fi-360\partightenfactor0
-
-\f4 \cf0 3)	If we iterate through ListIterator and add or delete iterator, no exception will be thrown. Because LiseIterator uses copy of arraylist. After elements are added ListIterator, later it will be merged or removed from original arraylist.\
+\cf0 3)	If we iterate through ListIterator and add or delete iterator, no exception will be thrown. Because LiseIterator uses copy of arraylist. After elements are added ListIterator, later it will be merged or removed from original arraylist.\
 \pard\pardeftab720\partightenfactor0
-
-\f8 \cf0 		List<String> list = 
+\cf0 		List<String> list = 
 \b \cf3 new
 \b0 \cf0  ArrayList<String>();\
 		list.add(\cf4 "Prabhu"\cf0 );\
@@ -530,134 +458,113 @@ If we iterate through Iterator and delete iterator value, no exception will be t
 \i0 \cf0 .println(it1.next());\
 			\
 \pard\pardeftab720\li720\partightenfactor0
-\cf0 	\}
-\f4 \
+\cf0 	\}\
 \pard\pardeftab720\partightenfactor0
 \cf0 Output:\
-\pard\pardeftab720\partightenfactor0
-
-\f8 \cf0 Prabhu\
+Prabhu\
 Ravi\
 Prabhu\
 bad\
 Ravi\
 bad\
-\pard\pardeftab720\partightenfactor0
-
-\f4 \cf0 \
-\pard\pardeftab720\partightenfactor0
-
-\fs18 \cf0 \
+\
+\
 \pard\tx630\pardeftab720\li450\fi-360\sl389\sa270\partightenfactor0
-\ls1\ilvl0
-\f0 \cf0 1.	
-\fs36 \cf7 \kerning1\expnd3\expndtw15
+\ls1\ilvl0\cf0 1.	\cf7 \kerning1\expnd3\expndtw15
 What is different between Iterator and ListIterator?\
 \pard\tx900\pardeftab720\li900\fi-360\sl364\sb60\partightenfactor0
 \ls1\ilvl1
-\f11 \cf7 \uc0\u10625 
-\f3 	
-\fs23 \kerning1\expnd0\expndtw0 We can use Iterator to traverse Set and List collections whereas ListIterator can be used with Lists only.\
+\f1 \cf7 \uc0\u10625 
+\f0 	\kerning1\expnd0\expndtw0 We can use Iterator to traverse Set and List collections whereas ListIterator can be used with Lists only.\
 1	Iterator can traverse in forward direction only whereas ListIterator can be used to traverse in both the directions.\
 2	ListIterator inherits from Iterator interface and comes with extra functionalities like adding an element, replacing an element, getting index position for previous and next elements.\
 \pard\pardeftab720\partightenfactor0
 
-\f0\b\fs20 \cf0 \
+\b \cf0 \
 \pard\pardeftab720\sl389\sa270\partightenfactor0
 
-\b0\fs36 \cf7 \kerning1\expnd3\expndtw15
+\b0 \cf7 \kerning1\expnd3\expndtw15
 What is difference between fail-fast and fail-safe?\
 \pard\pardeftab720\sl364\partightenfactor0
-
-\fs23 \cf7 \kerning1\expnd0\expndtw0 Concurrent Iterators fail-safe property work with the clone of underlying collection, hence it\'92s not affected by any modification in the collection. By design, all the collection classes in\'a0
-\f8\fs18 java.util
-\f0\fs23 \'a0package are fail-fast whereas collection classes in\'a0
-\f8\fs18 java.util.concurrent
-\f0\fs23 \'a0are fail-safe.\uc0\u8232 Fail-fast iterators throw ConcurrentModificationException whereas fail-safe iterator never throws ConcurrentModificationException.\
+\cf7 \kerning1\expnd0\expndtw0 Concurrent Iterators fail-safe property work with the clone of underlying collection, hence it\'92s not affected by any modification in the collection. By design, all the collection classes in\'a0java.util\'a0package are fail-fast whereas collection classes in\'a0java.util.concurrent\'a0are fail-safe.\uc0\u8232 Fail-fast iterators throw ConcurrentModificationException whereas fail-safe iterator never throws ConcurrentModificationException.\
 \pard\pardeftab720\partightenfactor0
 
-\b\fs20 \cf0 \
+\b \cf0 \
 \
 \
 \pard\pardeftab720\sb150\sa150\partightenfactor0
 
-\f12\i\b0\fs21 \cf7 34) What is UnsupportedOperationException?\
+\i\b0 \cf7 34) What is UnsupportedOperationException?\
 \pard\pardeftab720\sl300\partightenfactor0
 
-\f0\i0 \cf7 This exception is thrown\'a0
-\f3\b on invoked methods which are not supported by actual collection type
-\f0\b0 .\
+\i0 \cf7 This exception is thrown\'a0
+\b on invoked methods which are not supported by actual collection type
+\b0 .\
 \pard\pardeftab720\sl300\sa150\partightenfactor0
 \cf7 For example, if you make a read-only list list using \'93Collections.unmodifiableList(list)\'94 and then call add() or remove() method, what should happen. It should clearly throw UnsupportedOperationException.\
 \pard\pardeftab720\partightenfactor0
 
-\b\fs20 \cf0 \
+\b \cf0 \
 \
 \pard\pardeftab720\sb150\sa150\partightenfactor0
 
-\f12\i\b0\fs21 \cf7 33) How to avoid ConcurrentModificationException while iterating a collection?\
+\i\b0 \cf7 33) How to avoid ConcurrentModificationException while iterating a collection?\
 \pard\pardeftab720\sl300\partightenfactor0
 
-\f0\i0 \cf7 You should first try to\'a0
-\f3\b find another alternative iterator which are fail-safe
-\f0\b0 . If it is legacy collection, you can use enumeration.\
+\i0 \cf7 You should first try to\'a0
+\b find another alternative iterator which are fail-safe
+\b0 . If it is legacy collection, you can use enumeration.\
 \pard\pardeftab720\sl300\sa150\partightenfactor0
 \cf7 If above options are not possible then you can use one of three changes:\
 \pard\pardeftab720\li720\fi-360\sl300\partightenfactor0
-
-\f3 \cf7 If you are using JDK1.5 or higher then you can use ConcurrentHashMap and CopyOnWriteArrayList classes. It is the recommended approach.\
+\cf7 If you are using JDK1.5 or higher then you can use ConcurrentHashMap and CopyOnWriteArrayList classes. It is the recommended approach.\
 Make the collection immutable by Collections.unmodifiablexxxx\
 You can convert the list to an array and then iterate on the array.\
 You can lock the list while iterating by putting it in a synchronized block.\
 \pard\pardeftab720\sl300\sa150\partightenfactor0
-
-\f0 \cf7 Please note that last two approaches will cause a performance hit.\
+\cf7 Please note that last two approaches will cause a performance hit.\
 \pard\pardeftab720\partightenfactor0
 
-\b\fs20 \cf0 \
+\b \cf0 \
 \pard\pardeftab720\sb150\sa150\partightenfactor0
 
-\f12\i\b0\fs21 \cf7 27) How to make a collection read only?\
+\i\b0 \cf7 27) How to make a collection read only?\
 \pard\pardeftab720\sl300\sa150\partightenfactor0
 
-\f0\i0 \cf7 Use following methods:\
+\i0 \cf7 Use following methods:\
 \pard\pardeftab720\li720\fi-360\sl300\partightenfactor0
-
-\f3 \cf7 Collections.unmodifiableList(list);\
+\cf7 Collections.unmodifiableList(list);\
 Collections.unmodifiableSet(set);\
 Collections.unmodifiableMap(map);\
 \pard\pardeftab720\sl300\sa150\partightenfactor0
-
-\f0 \cf7 These methods takes collection parameter and return a new read-only collection with same elements as in original collection.\
+\cf7 These methods takes collection parameter and return a new read-only collection with same elements as in original collection.\
 \pard\pardeftab720\sb150\sa150\partightenfactor0
 
-\f12\i \cf7 28) How to make a collection thread safe?\
+\i \cf7 28) How to make a collection thread safe?\
 \pard\pardeftab720\sl300\sa150\partightenfactor0
 
-\f0\i0 \cf7 Use below methods:\
+\i0 \cf7 Use below methods:\
 \pard\pardeftab720\li720\fi-360\sl300\partightenfactor0
-
-\f3 \cf7 Collections.synchronizedList(list);\
+\cf7 Collections.synchronizedList(list);\
 Collections.synchronizedSet(set);\
 Collections.synchronizedMap(map);\
 \pard\pardeftab720\sl300\sa150\partightenfactor0
-
-\f0 \cf7 Above methods take collection as parameter and return same type of collection which are synchronized and thread safe. What does that mean?....all the method inside collections like add, remove etc\'85. are threadsafe. \
+\cf7 Above methods take collection as parameter and return same type of collection which are synchronized and thread safe. What does that mean?....all the method inside collections like add, remove etc\'85. are threadsafe. \
 Get method is not threadsafe. So during iteration of Collections.synchronizedList, if some one modifies the collection, the result is unpredictable. So it is better to put iteration logic inside synchronized.\
 \pard\pardeftab720\partightenfactor0
 
-\b\fs20 \cf0 \
+\b \cf0 \
 \
 \
-\ul How HashMap Internally works:\
-\ulnone \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul How HashMap Internally works:\
+\pard\pardeftab720\partightenfactor0
+\cf0 \ulnone \
 \pard\pardeftab720\partightenfactor0
 
 \b0 \cf0 For each unique hash, a entry will be created in array which is index. The key and values are stored inside linkedlist pointed by array.\
 \
-\pard\pardeftab720\partightenfactor0
-
-\f6\fs22 \cf0 transient Entry[] table;\
+transient Entry[] table;\
 static final int DEFAULT_INITIAL_CAPACITY = 16;\
 static final int MAXIMUM_CAPACITY = 1 << 30;\
     static class Entry<K,V> implements Map.Entry<K,V> \{\
@@ -665,9 +572,7 @@ static final int MAXIMUM_CAPACITY = 1 << 30;\
         V value;\
         Entry<K,V> next;\
         final int hash;\
-\pard\pardeftab720\partightenfactor0
-
-\f0\fs20 \cf0 \
+\
 \
 During collision (i.e. 2 elements lands in same bucket) HashMap inserts elements at head rather tail to avoid infinity loop. So tail node Entry will be null.\
 \
@@ -677,176 +582,130 @@ Array size cannot be increased. So during rehashing (16*.75= 28). A new array of
 \
 \pard\pardeftab720\partightenfactor0
 
+\b \cf0 \ul Points to Note:\
+\pard\pardeftab720\partightenfactor0
+
+\b0 \cf0 \ulnone 	If we put duplicate key in HashMap, it will not add current key(keeps older key), adds new value and return previous value.\
+EX: \
+\pard\pardeftab720\fi720\partightenfactor0
+\cf0 1,\'94prabhu\'94 \uc0\u9674  return null\
+1, \'93ravi\'94 \uc0\u9674  return prabhu\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\pard\pardeftab720\sb360\partightenfactor0
+
+\b \cf19 \ul \ulc19 How HashSet works internally\
+\pard\pardeftab720\partightenfactor0
+
+\b0 \cf0 \ulnone HashSet internally uses HashMap. Sets value to dummyObject for each key.\
+\
+\pard\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\pardeftab720\sl252\partightenfactor0
+
+\b \cf15 public
+\b0 \cf0  
+\b \cf15 class
+\b0 \cf0  
+\b \cf20 HashSet
+\b0 \cf7 <\cf0 E\cf7 >\cf0  
+\b \cf15 extends
+\b0 \cf0  AbstractSet\cf7 <\cf0 E\cf7 > \
+\pard\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\pardeftab720\li720\sl252\partightenfactor0
+\cf7 \{\cf0 \
+\pard\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\pardeftab720\li720\sl278\partightenfactor0
+
+\b \cf15 private
+\b0 \cf0  
+\b \cf15 transient
+\b0 \cf0  HashMap\cf7 <\cf0 E\cf7 ,\cf0 Object\cf7 >\cf0  map\cf7 ;\
+
+\b \cf15 \
+public
+\b0 \cf0  
+\b \cf21 boolean
+\b0 \cf0  
+\b \cf22 add
+\b0 \cf7 (\cf0 E e\cf7 )\cf0  \cf7 \{\
+\cf0     
+\b \cf15 return
+\b0 \cf0  map\cf7 .\cf23 put\cf7 (\cf0 e\cf7 ,\cf0  PRESENT\cf7 )==
+\b \cf15 null
+\b0 \cf7 ;\cf0 \
+\cf7 \}\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \}\
+\
+\pard\pardeftab720\partightenfactor0
+
 \b \cf0 \ul \ulc0 Points to Note:\
 \pard\pardeftab720\partightenfactor0
 
 \b0 \cf0 \ulnone 	If we put duplicate key in HashMap, it will not add current key(keeps older key), adds new value and return previous value.\
 EX: \
 \pard\pardeftab720\fi720\partightenfactor0
-\cf0 1,\'94prabhu\'94 
-\f2 \uc0\u9674 
-\f0  return null\
-1, \'93ravi\'94 
-\f2 \uc0\u9674 
-\f0  return prabhu\
+\cf0 1,\'94prabhu\'94 \uc0\u9674  return null\
+1, \'93ravi\'94 \uc0\u9674  return prabhu\
 \pard\pardeftab720\partightenfactor0
 \cf0 \
-\
-\
-\
-\
-\
-\
-\
-
-\f1\fs24 \
-\
-\
+So HashSet compares null to verify that element is added and returns true else false.\
 \pard\pardeftab720\sb360\partightenfactor0
 
-\f0\b\fs41 \cf19 \ul \ulc19 How HashSet works internally\
-\pard\pardeftab720\partightenfactor0
-
-\f1\b0\fs24 \cf0 \ulnone HashSet internally uses HashMap. Sets value to dummyObject for each key.\
-\
-\pard\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\pardeftab720\sl252\partightenfactor0
-
-\f7\b\fs20 \cf15 public
-\f6\b0 \cf0  
-\f7\b \cf15 class
-\f6\b0 \cf0  
-\f7\b \cf20 HashSet
-\f6\b0 \cf7 <\cf0 E\cf7 >\cf0  
-\f7\b \cf15 extends
-\f6\b0 \cf0  AbstractSet\cf7 <\cf0 E\cf7 > \
-\pard\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\pardeftab720\li720\sl252\partightenfactor0
-\cf7 \{\cf0 \
-\pard\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\pardeftab720\li720\sl278\partightenfactor0
-
-\f7\b \cf15 private
-\f6\b0 \cf0  
-\f7\b \cf15 transient
-\f6\b0 \cf0  HashMap\cf7 <\cf0 E\cf7 ,\cf0 Object\cf7 >\cf0  map\cf7 ;\
-
-\f7\b\fs23 \cf15 \
-public
-\f6\b0 \cf0  
-\f7\b \cf21 boolean
-\f6\b0 \cf0  
-\f7\b \cf22 add
-\f6\b0 \cf7 (\cf0 E e\cf7 )\cf0  \cf7 \{
-\fs20 \
-
-\fs23 \cf0     
-\f7\b \cf15 return
-\f6\b0 \cf0  map\cf7 .\cf23 put\cf7 (\cf0 e\cf7 ,\cf0  PRESENT\cf7 )==
-\f7\b \cf15 null
-\f6\b0 \cf7 ;\cf0 \
-\cf7 \}\cf0 \
-\pard\pardeftab720\partightenfactor0
-
-\f1\fs24 \cf0 \}\
-\
-\pard\pardeftab720\partightenfactor0
-
-\f0\b\fs20 \cf0 \ul \ulc0 Points to Note:\
-\pard\pardeftab720\partightenfactor0
-
-\b0 \cf0 \ulnone 	If we put duplicate key in HashMap, it will not add current key(keeps older key), adds new value and return previous value.\
-EX: \
-\pard\pardeftab720\fi720\partightenfactor0
-\cf0 1,\'94prabhu\'94 
-\f2 \uc0\u9674 
-\f0  return null\
-1, \'93ravi\'94 
-\f2 \uc0\u9674 
-\f0  return prabhu\
-\pard\pardeftab720\partightenfactor0
-\cf0 \
-
-\f1\fs24 So HashSet compares null to verify that element is added and returns true else false.
-\f0\fs20 \
-\pard\pardeftab720\sb360\partightenfactor0
-
-\b\fs41 \cf19 \
+\b \cf19 \
 ConcurrentHashMap\
 \pard\pardeftab720\sb240\partightenfactor0
 
-\b0\fs27 \cf24 The\'a0
-\f4 ConcurrentHashMap
-\f0 \'a0is very similar to\'a0
-\f4 HashTable
-\f0 \'a0but in better way.\'a0\
+\b0 \cf24 The\'a0ConcurrentHashMap\'a0is very similar to\'a0HashTable\'a0but in better way.\'a0\
 \pard\pardeftab720\li1755\fi-1035\sb240\partightenfactor0
-
-\f4 \cf24 ConcurrentHashMap
-\f0 \'a0does not lock the\'a0
-\f4 Map
-\f0 \'a0while you are reading from it. \
-Additionally,\'a0
-\f4 ConcurrentHashMap
-\f0 \'a0does not lock the entire\'a0
-\f4 Map
-\f0 \'a0when writing to it. It only locks the part of the\'a0
-\f4 Map
-\f0 \'a0that is being written to, internally.\
-Another difference is that\'a0
-\f4 ConcurrentHashMap
-\f0 \'a0does not throw\'a0
-\f4 ConcurrentModificationException
-\f0 \'a0if the
-\f4 ConcurrentHashMap
-\f0 \'a0is changed while being iterated. Generally\'a0
-\f4 Iterators are fail-fast 
-\f0 but iterators  will not throw error here\
+\cf24 ConcurrentHashMap\'a0does not lock the\'a0Map\'a0while you are reading from it. \
+Additionally,\'a0ConcurrentHashMap\'a0does not lock the entire\'a0Map\'a0when writing to it. It only locks the part of the\'a0Map\'a0that is being written to, internally.\
+Another difference is that\'a0ConcurrentHashMap\'a0does not throw\'a0ConcurrentModificationException\'a0if theConcurrentHashMap\'a0is changed while being iterated. Generally\'a0Iterators are fail-fast but iterators  will not throw error here\
 \pard\pardeftab720\sb240\partightenfactor0
 
-\f1\b\fs22 \cf0 Question : Is this possible for 2 threads to update the ConcurrentHashMap at the same moment ?\
+\b \cf0 Question : Is this possible for 2 threads to update the ConcurrentHashMap at the same moment ?\
 
 \b0 Answer : Yes, its possible to have 2 parallel threads writing to the CHM at the same time, infact in the default implementation of CHM, at most 16 threads can write and read in parallel. But in worst case if 
 \b \ul the two objects lie in the same segment, then parallel write would not be possible
-\b0 \ulnone .
-\f0\fs27 \cf24 \
+\b0 \ulnone .\cf24 \
 \pard\pardeftab720\sl221\partightenfactor0
 
-\b\fs22 \cf0 Question : Can multiple threads read from a given Hashtable concurrently ? 
+\b \cf0 Question : Can multiple threads read from a given Hashtable concurrently ? 
 \b0 \
 \pard\pardeftab720\sb240\partightenfactor0
-
-\f1 \cf0 Answer : No, get() method of hash table is synchronized (even for synchronized HashMap). So only one thread can get value from it at any given point in time. Full concurrency for reads is possible only in ConcurrentHashMap via the use of volatile.\
+\cf0 Answer : No, get() method of hash table is synchronized (even for synchronized HashMap). So only one thread can get value from it at any given point in time. Full concurrency for reads is possible only in ConcurrentHashMap via the use of volatile.\
 \pard\pardeftab720\sl221\partightenfactor0
 
-\f0\b \cf0 Question: Is Segment in ConcurrentHashMap similar to Bucket ? 
+\b \cf0 Question: Is Segment in ConcurrentHashMap similar to Bucket ? 
 \b0 \
 \pard\pardeftab720\sb240\partightenfactor0
-
-\f1 \cf0 Answer : No, in fact Segment is like a mini specialized version of hashtable that contains many buckets. Each segment holds a single lock, thus no two entries in the segment can be updated by more than one thread at a\
+\cf0 Answer : No, in fact Segment is like a mini specialized version of hashtable that contains many buckets. Each segment holds a single lock, thus no two entries in the segment can be updated by more than one thread at a\
 \pard\pardeftab720\sl389\sa270\partightenfactor0
-
-\f0\fs36 \cf7 \kerning1\expnd3\expndtw15
+\cf7 \kerning1\expnd3\expndtw15
 What is difference between HashMap and Hashtable?\
 \pard\pardeftab720\sl364\sa360\partightenfactor0
-
-\fs23 \cf7 \kerning1\expnd0\expndtw0 HashMap and Hashtable both implements Map interface and looks similar, however there are following difference between HashMap and Hashtable.\
+\cf7 \kerning1\expnd0\expndtw0 HashMap and Hashtable both implements Map interface and looks similar, however there are following difference between HashMap and Hashtable.\
 \pard\pardeftab720\li450\fi-360\sl364\partightenfactor0
-
-\f3 \cf7 HashMap allows null key and values whereas Hashtable doesn\'92t allow null key and values.\
+\cf7 HashMap allows null key and values whereas Hashtable doesn\'92t allow null key and values.\
 Hashtable is synchronized but HashMap is not synchronized. So HashMap is better for single threaded environment, Hashtable is suitable for multi-threaded environment.\
 \pard\pardeftab720\li720\fi-360\sl364\partightenfactor0
-
-\f0\fs27 \cf24  
-\f3\fs23 \cf7 HashMap provides Set of keys to iterate and hence it\'92s fail-fast but Hashtable provides Enumeration of keys that doesn\'92t support this feature.\
+\cf24  \cf7 HashMap provides Set of keys to iterate and hence it\'92s fail-fast but Hashtable provides Enumeration of keys that doesn\'92t support this feature.\
 \pard\pardeftab720\sl364\partightenfactor0
 \cf7 \
 Does ArrayList maintaing insertion order: Yes, even if we insert in middle by giving index, still order is maintained\
 \pard\pardeftab720\sl364\partightenfactor0
 
-\b\fs20 \cf7 \ul \ulc7 CopyOnWriteArrayList
-\f13 \'a0(From Java 1.5):\
+\b \cf7 \ul \ulc7 CopyOnWriteArrayList\'a0(From Java 1.5):\
 
-\f1\b0\fs27 \cf0 \ulnone A thread-safe variant of\'a0{\field{\*\fldinst{HYPERLINK "file:///C:%5C%5CUsers%5C%5Cg580-466%5C%5CDocuments%5C%5CStudy%5C%5CStudy%5C%5CJava%20Materials%5C%5CAPIs%5C%5Cjdk-1_5_0-doc%5C%5Cdocs%5C%5Capi%5C%5Cjava%5C%5Cutil%5C%5CArrayList.html"}}{\fldrslt 
-\f6\fs20 \cf8 \ul \ulc8 ArrayList}}\'a0in which all mutative operations (add, set, and so on) are implemented by making a fresh copy of the underlying array.
-\f13\b\fs20 \cf7 \ul \ulc7 \
+\b0 \cf0 \ulnone A thread-safe variant of\'a0{\field{\*\fldinst{HYPERLINK "file:///C:%5C%5CUsers%5C%5Cg580-466%5C%5CDocuments%5C%5CStudy%5C%5CStudy%5C%5CJava%20Materials%5C%5CAPIs%5C%5Cjdk-1_5_0-doc%5C%5Cdocs%5C%5Capi%5C%5Cjava%5C%5Cutil%5C%5CArrayList.html"}}{\fldrslt \cf8 \ul \ulc8 ArrayList}}\'a0in which all mutative operations (add, set, and so on) are implemented by making a fresh copy of the underlying array.
+\b \cf7 \ul \
 
 \b0 \ulnone It is a ArrayList with below feature\uc0\u8232 	1) ThreadSafe. \
 	2) fail-safe. During iteration, list is allowed for modification. if list is modified ConcurrentModificationException is not thrown. Internally it will be copied. On next iteation value is visible\
@@ -858,56 +717,45 @@ ArrayList is fail-fast. During iteration, list is not allowed for modification.\
 During iteration, Iterator is allowed for add(only on ListIterator) and remove. On next iteration value is visible\
 \pard\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\pardeftab720\partightenfactor0
 
-\f7\b\fs31 \cf25 CopyOnWriteArraySet
-\f6\b0 \
+\b \cf25 CopyOnWriteArraySet
+\b0 \
 \pard\pardeftab720\sl364\partightenfactor0
-
-\f0\fs18 \cf25 A\'a0{\field{\*\fldinst{HYPERLINK "http://docs.oracle.com/javase/7/docs/api/java/util/Set.html"}}{\fldrslt 
-\f6\fs22 \cf26 \ul \ulc26 Set}}\'a0that uses an internal\'a0{\field{\*\fldinst{HYPERLINK "http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CopyOnWriteArrayList.html"}}{\fldrslt 
-\f6\fs22 \cf26 \ul \ulc26 CopyOnWriteArrayList}}\'a0for all of its operations
-\f13\fs20 \cf7 \
+\cf25 A\'a0{\field{\*\fldinst{HYPERLINK "http://docs.oracle.com/javase/7/docs/api/java/util/Set.html"}}{\fldrslt \cf26 \ul \ulc26 Set}}\'a0that uses an internal\'a0{\field{\*\fldinst{HYPERLINK "http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CopyOnWriteArrayList.html"}}{\fldrslt \cf26 \ul \ulc26 CopyOnWriteArrayList}}\'a0for all of its operations\cf7 \
 \pard\pardeftab720\partightenfactor0
-
-\f0\fs24 \cf0 \
+\cf0 \
 \pard\pardeftab720\sl221\partightenfactor0
 
-\b\fs22 \cf0 Structural Modification (fail fast arises only when Sturctural Modification is done)
+\b \cf0 Structural Modification (fail fast arises only when Sturctural Modification is done)
 \b0 \
 \pard\pardeftab720\partightenfactor0
 
 \i \cf0 \'93A structural modification is any operation that adds or deletes one or more elements, or explicitly resizes the backing array; merely changing the values associated with a key that an instance already contains is not a structural modification.\'94 - Java Docs\
 \pard\pardeftab720\partightenfactor0
 
-\i0\b\fs26 \cf0 \
+\i0\b \cf0 \
 \
 Are there concurrent version for TreeMap and TreeSet in Java Collections Framework in Java 1.6? 
 \b0 \
 \pard\pardeftab720\sl364\partightenfactor0
-
-\f1\fs22 \cf0 Java 1.6 Collection Framework have ConcurrentSkipListMap and ConcurrentSkipListSet which are concurrent replacement for TreeMap and TreeSet. \
+\cf0 Java 1.6 Collection Framework have ConcurrentSkipListMap and ConcurrentSkipListSet which are concurrent replacement for TreeMap and TreeSet. \
 \
 These classes implement SortedMap and SortedSet interface respectively. \
 \
 So if our application demands fair concurrency then instead of wrapping TreeMap and TreeSet inside synchronized collection, we can prefer these concurrent utilities. \
 \
-These also implement NavigableMap and NavigableSet interface with methods like lowerKey, floorKey, ceilingKey, higherKey, headMap and tailMap.
-\f13\fs20 \cf7 \
+These also implement NavigableMap and NavigableSet interface with methods like lowerKey, floorKey, ceilingKey, higherKey, headMap and tailMap.\cf7 \
 \pard\pardeftab720\sl364\partightenfactor0
 
-\f8\b\fs28 \cf0 \ul \ulc0 WeakHashMap:\
+\b \cf0 \ul \ulc0 WeakHashMap:\
 
-\f14\b0\fs20 \ulnone A WeakHashMap is a special Map implementation where the keys of the map are stored in a java.lang.ref.WeakReference. By storing the keys in a weak reference, key-value pairs can dynamically be dropped from the map when the strong reference is which is pointed by key is vanished. Also, just because a key may be dropped, doesn't mean it will immediately be dropped. If the system has sufficient resources, the weak key reference that isn't externally referenced could stay around for a long time.
-\f8\fs18 \
+\b0 \ulnone A WeakHashMap is a special Map implementation where the keys of the map are stored in a java.lang.ref.WeakReference. By storing the keys in a weak reference, key-value pairs can dynamically be dropped from the map when the strong reference is which is pointed by key is vanished. Also, just because a key may be dropped, doesn't mean it will immediately be dropped. If the system has sufficient resources, the weak key reference that isn't externally referenced could stay around for a long time.\
 \pard\pardeftab720\sl364\partightenfactor0
-
-\f3\fs23 \cf7 \
+\cf7 \
 \pard\pardeftab720\sb240\partightenfactor0
-
-\f0\fs27 \cf24 \
+\cf24 \
 LinkedHashSet: It works similar to HashSet + maintains a seperate Linkedlist for insertion order\
 \pard\pardeftab720\partightenfactor0
 
-\b\fs20 \cf0 \
-\pard\pardeftab720\partightenfactor0
-\cf0 \
+\b \cf0 \
+\
 }
