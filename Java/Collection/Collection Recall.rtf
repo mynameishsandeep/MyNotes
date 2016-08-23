@@ -8,7 +8,7 @@
 \red53\green56\blue51;\red76\green107\blue135;}
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid2\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid1}}
 {\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
-\vieww28300\viewh17700\viewkind0
+\vieww25100\viewh12920\viewkind0
 \deftab720
 \pard\pardeftab720\partightenfactor0
 
@@ -54,9 +54,8 @@ How linkedlist works \uc0\u9674 https://www.youtube.com/watch?v=7LuSzUim-RY\
 \b ====================================================\
 \pard\pardeftab720\partightenfactor0
 \cf0 \ul ArrayList vs LinkedList\
-\pard\pardeftab720\partightenfactor0
 
-\b0 \cf0 \ulnone 1) Search: ArrayList search operation is pretty fast compared to the LinkedList search operation. get(int index) in ArrayList gives the performance of O(1) while LinkedList performance is O(n).\
+\b0 \ulnone 1) Search: ArrayList search operation is pretty fast compared to the LinkedList search operation. get(int index) in ArrayList gives the performance of O(1) while LinkedList performance is O(n).\
 \
 Reason: ArrayList maintains index based system for its elements as it uses array data structure implicitly which makes it faster for searching an element in the list. On the other side LinkedList implements doubly linked list which requires the traversal through all the elements for searching an element.\
 \
@@ -97,8 +96,7 @@ Set-->
 \b TreeSet-->
 \b0 sorted \
 \
-Map-->A Map cares about unique identifiers. You map a unique key (the ID) to a specific\
-value, where both the key and the value are, of course, objects\
+Map-->A Map cares about unique identifiers. You map a unique key (the ID) to a specific value, where both the key and the value are, of course, objects\
 
 \b HashMap -->
 \b0 shuffle\
@@ -210,21 +208,17 @@ method would be considered appropriate and even correct because it doesn\'92t vi
 the contract. Once more, correct does not necessarily mean good.
 \i0\b0 \
 \
-\pard\pardeftab720\partightenfactor0
 
-\b \cf0 \ul To Check for the insertion: \
-\pard\pardeftab720\partightenfactor0
+\b \ul To Check for the insertion: \
 
-\b0 \cf0 \ulnone List<String> list = new ArrayList<String>();\
+\b0 \ulnone List<String> list = new ArrayList<String>();\
 boolean b = list.add("person");\
 list.add(0,\'94person\'94); // This will move the previously added person to index 1\
 \
-\pard\pardeftab720\partightenfactor0
 
-\b \cf0 \ul To Check for the hashValue for an object\
-\pard\pardeftab720\partightenfactor0
+\b \ul To Check for the hashValue for an object\
 
-\b0 \cf0 \ulnone object.hashCode();\
+\b0 \ulnone object.hashCode();\
 \
 ================================================================================================= ======================\
 \
@@ -239,9 +233,8 @@ Collection.Sort(employeeList, new EmpIdComparator())\
 Ex: EmpNameComparator implements Comparator\
 Collection.Sort(employeeList, new EmpNameComparator())\
 \
-\pard\pardeftab720\partightenfactor0
 
-\b \cf0 \ul If we try to sort an userdefined objects which is placed in Arrays or LinkedList\'85it will throw below error\
+\b \ul If we try to sort an userdefined objects which is placed in Arrays or LinkedList\'85it will throw below error\
 \pard\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\pardeftab720\sa300\partightenfactor0
 
 \b0 \cf6 \ulnone Exception\cf7  in thread \cf8 "main"\cf7  java.\cf9 lang\cf7 .\cf6 ClassCastException\cf10 :\cf7  \
@@ -580,12 +573,10 @@ During collision (i.e. 2 elements lands in same bucket) HashMap inserts elements
 Hashmap initial size is 16. When it goes beyond, rehashing occurs.\
 Array size cannot be increased. So during rehashing (16*.75= 28). A new array of size 28 is created. entire old array value is copied to new array.\
 \
-\pard\pardeftab720\partightenfactor0
 
-\b \cf0 \ul Points to Note:\
-\pard\pardeftab720\partightenfactor0
+\b \ul Points to Note:\
 
-\b0 \cf0 \ulnone 	If we put duplicate key in HashMap, it will not add current key(keeps older key), adds new value and return previous value.\
+\b0 \ulnone 	If we put duplicate key in HashMap, it will not add current key(keeps older key), adds new value and return previous value.\
 EX: \
 \pard\pardeftab720\fi720\partightenfactor0
 \cf0 1,\'94prabhu\'94 \uc0\u9674  return null\
@@ -647,9 +638,8 @@ public
 \pard\pardeftab720\partightenfactor0
 
 \b \cf0 \ul \ulc0 Points to Note:\
-\pard\pardeftab720\partightenfactor0
 
-\b0 \cf0 \ulnone 	If we put duplicate key in HashMap, it will not add current key(keeps older key), adds new value and return previous value.\
+\b0 \ulnone 	If we put duplicate key in HashMap, it will not add current key(keeps older key), adds new value and return previous value.\
 EX: \
 \pard\pardeftab720\fi720\partightenfactor0
 \cf0 1,\'94prabhu\'94 \uc0\u9674  return null\
