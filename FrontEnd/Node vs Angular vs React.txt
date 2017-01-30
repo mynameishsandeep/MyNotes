@@ -1,0 +1,5 @@
+Node.js is a fast Javascript runtime combined with a low-level API similar to the standard libraries of many programming languages (file system access, buffers, streams, i/o, etc.).Node is mostly a stable backend javascript system. Ex: You can create Rest API with it.
+
+Angular is a model-view-controller framework for client-side JS development. It can be used with Node.js as a backend, or anything else. Its main feature is 2-way data-binding, and addresses most of the concerns of a single-page web app within the framework. It's older and it's ecosystem is bigger.
+
+React is often compared to Angular, because it is a front-end library, but it is not a framework. It is simply the view layer, with a large ecosystem of open-source projects supporting it. The big conceptual difference is a uni-directional data flow, rather than 2-way data binding. You need a lot more besides React to make a full application, but React handles it's use case exceptionally well. Node.js makes a great backend for React as well, but again, it can work with any backend.
