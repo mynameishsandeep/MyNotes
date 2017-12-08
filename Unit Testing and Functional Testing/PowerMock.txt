@@ -1,0 +1,1 @@
+PowerMock is a mocking framework that extends other mocking frameworks to provide much needed additional functionality. it refreshes the parts that other mocking frameworks fail to reach.

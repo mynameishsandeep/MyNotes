@@ -1,3 +1,7 @@
 1) Given an single linked list find if the data is palindrome. No matter on space complexity. time complexity should be a max of O(n)
+	a) assign 2 pointers. 1 move by 1 char, 2nd move by 2 char.
+	b) put the data in stack for each char in 1pointer move.
+	c) when 2nd pointer reaches end. take char from stack and compare it with each of 	next data. 
+	d) if comparison success all the way end. it is palindrome, otherwise break the loop and return saying not palindrome.
 2) Find the first occurance of non-repetetive character in a string. 
 3)

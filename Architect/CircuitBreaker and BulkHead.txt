@@ -1,5 +1,35 @@
-Lets say I am having product service and it has 10 instance
+https://stackoverflow.com/questions/30391809/what-is-bulkhead-pattern-used-by-hystrix
 
-When an service instance is failed or not responsive for some reason. Ex: it is trying to call an 
 
+
+
+In general, the goal of the bulkhead pattern is to avoid faults in one part of a system to take the entire system down. The term comes from ships where a ship is divided in separate watertight compartments to avoid a single hull breach to flood the entire ship; it will only flood one bulkhead.
+
+Implementations of the bulkhead pattern can take many forms depending on what kind of faults you want to protect the system from. I will only discuss the type of faults Hystrix handles in this answer.
+
+I think the bulkhead pattern was popularized by the book Release It! by Michael T. Nygard.
+
+What Hystrix Solves
+
+The bulkhead implementation in Hystrix limits the number of concurrent calls to a component. This way, the number of resources (typically threads) that is waiting for a reply from the component is limited.
+
+Assume you have a request based, multi threaded application (for example a typical web application) that uses three different components, A, B, and C. If requests to component C starts to hang, eventually all request handling threads will hang on waiting for an answer from C. This would make the application entirely non-responsive. If requests to C is handled slowly we have a similar problem if the load is high enough.
+
+Hystrix' implementation of the bulkhead pattern limits the number of concurrent calls to a component and would have saved the application in this case. Assume we have 30 request handling threads and there is a limit of 10 concurrent calls to C. Then at most 10 request handling threads can hang when calling C, the other 20 threads can still handle requests and use components A and B.
+
+Hystrix' approaches
+
+Hystrix' has two different approaches to the bulkhead, thread isolation and semaphore isolation.
+
+Thread Isolation
+
+The standard approach is to hand over all requests to component C to a separate thread pool with a fixed number of threads and no (or a small) request queue.
+
+Semaphore Isolation
+
+The other approach is to have all callers acquire a permit (with 0 timeout) before requests to C. If a permit can't be acquired from the semaphore, calls to C are not passed through.
+
+Differences
+
+The advantage of the thread pool approach is that requests that are passed to C can be timed out, something that is not possible when using semaphores.
 How to simulate an instance not to respond: add an infinity loop for a specific method. Call that API. That instance will be stuck.
