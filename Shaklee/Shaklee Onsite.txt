@@ -1,7 +1,3 @@
-wifi... name:skgst12 pwd:sk52887209
-
-cls_smtp.php       -->smpt configured and pointing localhost...
-
 
 node.js --> server for javascript... swagger needs node.js for web service api exposing
 
