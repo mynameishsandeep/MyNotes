@@ -1,0 +1,7 @@
+More than 75% of cart is abandoned without checkout because of distraction.
+To simplify cart abandonment implementation, we're going to give merchants the option to move the 
+email field first on Ship/Bill page. So that Email Marketing team can send mail to users to remind,
+there are products in cart which needs to be purchased and they can provide discount on that sometimes.
+
+ReCaptcha v3... decision based on points(0.0 to 1.0) of user browser fingerprint. Merchant can 
+configure. 
